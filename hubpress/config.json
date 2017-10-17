@@ -11,7 +11,7 @@
   "urls": {
     "site": "http://amhopkins.com",
     "hubpress": "https://amhopkins.com",
-    "theme": "//amhopkins.com/themes/casper",
+    "theme": "//amhopkins.com/themes/roon",
     "images": "http://amhopkins.com/images"
   },
   "initialisationConfigComponent": {
@@ -28,7 +28,7 @@
   "site": {
     "title": "The Writings of Adam M. Hopkins",
     "description": "",
-    "logo": "https://amhopkins.com/images/logo/logo.png",
+    "logo": "https://gravatar.com/avatar/2bd8d2a8ab49411133d56a315096384a?s=200",
     "cover": "https://amhopkins.com/images/visions-desert.jpg",
     "delay": "",
     "postsPerPage": "",

@@ -95,31 +95,34 @@ body .btn, body>header h1, body article header h1, body>footer .details h4, body
     font-family: "Open Sans", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
 }
 body.serif {
-    font-family: "Crimson", "Merriweather", "Georgia", "Times New Roman", serif
+    font-family: "Crimson", "Georgia", "Times New Roman", serif
 }
 body.serif>header h1, body.serif>footer, body.serif>footer h4, body.serif #post_nav {
-    font-family: "Crimson", "Merriweather", "Georgia", "Times New Roman", serif
+    font-family: "Crimson", "Georgia", "Times New Roman", serif
 }
 body.serif>a.btn.nav {
-    font-family: "Crimson", "Merriweather", "Georgia", "Times New Roman", serif;
+    font-family: "Crimson", "Georgia", "Times New Roman", serif;
     padding-top: 16px;
     padding-bottom: 14px
 }
 body.serif>a.btn.nav.next span {
     margin-top: 2px
 }
-body.serif article time, body.serif article>.meta, body.serif article>header h1, body.serif article>header .count, body.serif article.feature h1 a, body.serif .post-footer, body.serif .post-footer h4 {
-    font-family: "Crimson", "Merriweather", "Georgia", "Times New Roman", serif
+body.serif article time, body.serif article>.meta, body.serif article>header .count, body.serif article.feature h1 a, body.serif .post-footer, body.serif .post-footer h4 {
+    font-family: "Crimson", "Georgia", "Times New Roman", serif
+}
+body.serif article>header h1 {
+    font-family: "Merriweather", "Crimson", "Georgia", "Times New Roman", serif
 }
 body.serif article .text {
-    font-family: "Crimson", "Merriweather", "Georgia", "Times New Roman", serif;
+    font-family: "Crimson", "Georgia", "Times New Roman", serif;
     font-size: 17px
 }
 body.serif article .text blockquote {
-    font-family: "Crimson", "Merriweather", "Georgia", "Times New Roman", serif
+    font-family: "Crimson", "Georgia", "Times New Roman", serif
 }
 body.serif article>menu #btn_comment {
-    font-family: "Crimson", "Merriweather", "Georgia", "Times New Roman", serif;
+    font-family: "Crimson", "Georgia", "Times New Roman", serif;
     font-size: 13px
 }
 body.serif article>menu #btn_comment span {

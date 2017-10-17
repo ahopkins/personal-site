@@ -1216,6 +1216,17 @@ body>.no-posts [data-icon]:before {
     font-size: 130px;
     color: #e8e8e9
 }
+.home-template article .image-holder .inner {
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 18px;
+}
+.home-template article img {
+    display: none;
+}
 #share_modal {
     display: none;
     position: fixed;

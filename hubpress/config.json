@@ -6,7 +6,7 @@
     "cname": "amhopkins.com"
   },
   "theme": {
-    "name": "casper"
+    "name": "roon"
   },
   "urls": {
     "site": "http://amhopkins.com",
@@ -24,5 +24,27 @@
       null
     ],
     "_Ctor": {}
+  },
+  "site": {
+    "title": "The Writings of Adam M. Hopkins",
+    "description": "",
+    "logo": "https://amhopkins.com/images/logo/logo.png",
+    "cover": "https://amhopkins.com/images/visions-desert.jpg",
+    "delay": "",
+    "postsPerPage": "",
+    "googleAnalytics": "UA-56325740-3",
+    "disqus": "amhopkins"
+  },
+  "socialnetwork": {
+    "email": "",
+    "github": "",
+    "twitter": "",
+    "facebook": "",
+    "googleplus": "",
+    "instagram": "",
+    "pinterest": "",
+    "flickr": "",
+    "linkedin": "",
+    "stackoverflow": ""
   }
 }

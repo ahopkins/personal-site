@@ -5,7 +5,7 @@
 // :hp-tags: HubPress, Blog, Open_Source,
 // :hp-alt-title: My English Title
 = The journey to becoming a writer begins, err continues
-:hp-image: /images/covers/pencil.jpg
+:hp-image: /images/covers/pencils.jpg
 :published_at: 2017-10-17
 
 In many ways, the journey began back when I was in 4th grade in Mr. Myhill's class. He had a love for story writing, and I remember vividly sitting and writing story after story in his class. They were, of course, the sort of nonsensical stories that piqued the imagination of a 9 year old, but the settings and the characters I created are still imprinted in my memory.

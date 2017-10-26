@@ -1,7 +1,7 @@
 <footer role="contentinfo">
     <div class="inner">
         <div class="vcard">
-            <a href="{{@blog.url}}/rss" id="btn_feed" class="btn" title="Feed" target="_blank">
+            <a href="{{@blog.url}}/rss/index.xml" id="btn_feed" class="btn" title="Feed" target="_blank">
                 <span aria-hidden="true" data-icon=")"></span>
                 <strong>Feed</strong>
             </a>
@@ -25,6 +25,9 @@
                 {{!-- TODO: Parse HTML for links --}}
                 {{@blog.description}}
             </div>
+        </div>
+        <div id="social">
+            {{> social}}
         </div>
     </div>
 </footer>

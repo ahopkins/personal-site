@@ -6,12 +6,12 @@
     "cname": "amhopkins.com"
   },
   "theme": {
-    "name": "roon"
+    "name": "roon-amhopkins"
   },
   "urls": {
     "site": "http://amhopkins.com",
     "hubpress": "https://amhopkins.com",
-    "theme": "//amhopkins.com/themes/roon-amhopkins",
+    "theme": "//amhopkins.com/themes/roon",
     "images": "http://amhopkins.com/images"
   },
   "initialisationConfigComponent": {

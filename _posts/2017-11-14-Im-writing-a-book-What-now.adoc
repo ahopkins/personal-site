@@ -5,9 +5,11 @@
 // :hp-tags: HubPress, Blog, Open_Source,
 // :hp-alt-title: My English Title
 
+:hide-uri-scheme:
+
 = I'm writing a book. What now?
 
-:hp-image: /covers/snow.jpg
+:hp-image: /images/covers/snow.jpg
 
 I am not a particularly huge fan of fiction. Or, at least not of reading fiction I should say. Sure, I have my favorite authors and books that can sweep me into that wonderful realm of being lost in a book. You know, the place that has you glued to a chair, sitting by the Lake, while the rest of your family is off to dinner. The place where you allow yourself to shirk all responsibilities in the name of finishing just one more chapter. Who doesn't like that place?
 
@@ -43,3 +45,5 @@ It is a ten step process:
 10. Begin first draft of novel
 
 I'll post some more about each step in depth and how I attack it. Wish me luck.
+
+If you would like to follow my journey: https://forms.sendpulse.com/7943edcac1/[subscribe here].

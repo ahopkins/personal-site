@@ -22,16 +22,22 @@ class Article(object):
     def _extract(self):
         with open(self.path, 'r') as file:
             self.soup = BeautifulSoup(file.read(), 'html.parser')
+        section = self.soup.find('div', id='js-post-content')
         self.title = self.soup.title.string
-        self.post = str(self.soup.find('section', class_='post'))
+        self.post = str(section)
+        self.text = section.get_text()
+        self.wordcount = len(self.text.split())
 
     def lock(self):
         Path(self.lock_path).touch()
 
 
-
 def publish(article_path):
     article = Article(article_path)
+
+    print('Title: {}'.format(article.title))
+    print('Word count: {}'.format(article.wordcount))
+    print('>> Beginning to publish {}'.format(article.title))
 
     client = Client(application_id=application_id, application_secret=application_secret)
     client.access_token = access_token
@@ -43,11 +49,10 @@ def publish(article_path):
         content_format='html',
         publish_status='draft'
     )
-    print('Done.')
-    print(post.get('url'))
+    print('>> Done.')
+    print('URL: {}'.format(post.get('url')))
     print('')
     article.lock()
-
 
 
 def main():
@@ -75,7 +80,6 @@ def main():
         article = publishable[int(index)]
 
         print('')
-        print('Beginning to publish {}'.format(article))
         publish(article)
     else:
         print('No publishable articles')

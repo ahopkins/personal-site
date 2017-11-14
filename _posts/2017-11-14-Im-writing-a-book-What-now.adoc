@@ -5,6 +5,8 @@
 // :hp-tags: HubPress, Blog, Open_Source,
 // :hp-alt-title: My English Title
 
+:hide-uri-scheme:
+
 = I'm writing a book. What now?
 
 :hp-image: /covers/snow.jpg
@@ -43,3 +45,5 @@ It is a ten step process:
 10. Begin first draft of novel
 
 I'll post some more about each step in depth and how I attack it. Wish me luck.
+
+If you would like to follow my journey: https://forms.sendpulse.com/7943edcac1/[subscribe here].

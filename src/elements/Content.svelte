@@ -12,7 +12,7 @@
     <Done />
 </div>
 
-<style lang="scss">
+<style>
     .is-divider {
         border-color: #111;
         max-width: 80%;

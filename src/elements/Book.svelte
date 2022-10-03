@@ -5,7 +5,7 @@
             <a href="https://sanicbook.com">
                 Python Web Development with Sanic
             </a>
-            is coming soon.
+            now available
         </div>
     </div>
 </section>
@@ -14,6 +14,8 @@
     .section {
         background-color: #ff0d68;
         color: #000000;
+        position: relative;
+        transform: translateY(-100%);
     }
     .section a {
         color: #000000;
@@ -22,5 +24,10 @@
     }
     .section a:hover {
         color: #111111;
+    }
+    @media (max-width: 800px) {
+        .section {
+            transform: translateY(-100vh);
+        }
     }
 </style>

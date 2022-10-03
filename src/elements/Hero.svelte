@@ -48,5 +48,34 @@
                 {/each}
             </div>
         </div>
+        <div class="adam-avatar" />
     </div>
 </section>
+
+<style>
+    .adam-avatar {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        width: 60vw;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+        opacity: 0.2;
+        background-position: right;
+        background-image: url(/images/adam-unified.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media (max-width: 1120px) {
+        .adam-avatar {
+            background-position: bottom right;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .adam-avatar {
+            background-size: contain;
+        }
+    }
+</style>

@@ -1,34 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,700");
-.adam-avatar.svelte-foloil {
-  position: absolute;
-  right: 0;
-  height: 100vh;
-  width: 60vw;
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-  opacity: 0.2;
-  background-position: right;
-  background-image: url(/images/adam-unified.svg);
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-@media (max-width: 1120px) {
-  .adam-avatar.svelte-foloil {
-    background-position: bottom right; } }
-
-@media (max-width: 1400px) {
-  .adam-avatar.svelte-foloil {
-    background-size: contain; } }
-
-.is-divider.svelte-pkt4u2 {
-  border-color: #111;
-  max-width: 80%;
-  margin: auto; }
-
-.is-divider[data-content].svelte-pkt4u2::after {
-  background: #242424 !important;
-  color: #444 !important; }
-
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .button, .input, .textarea, .select select, .file-cta,
@@ -8156,6 +8126,36 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   .is-divider-vertical.is-white-bis::before {
     border-left-color: #fafafa; }
 
+.adam-avatar.svelte-foloil {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 60vw;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  opacity: 0.2;
+  background-position: right;
+  background-image: url(/images/adam-unified.svg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+@media (max-width: 1120px) {
+  .adam-avatar.svelte-foloil {
+    background-position: bottom right; } }
+
+@media (max-width: 1400px) {
+  .adam-avatar.svelte-foloil {
+    background-size: contain; } }
+
+.is-divider.svelte-pkt4u2 {
+  border-color: #111;
+  max-width: 80%;
+  margin: auto; }
+
+.is-divider[data-content].svelte-pkt4u2::after {
+  background: #242424 !important;
+  color: #444 !important; }
+
 .section.svelte-gsari8.svelte-gsari8 {
   background-color: #ff0d68;
   color: #000000;
@@ -8181,10 +8181,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .repo a {
   color: #ff0d68 !important; }
 
-.box.svelte-mbc480 {
-  background: transparent;
-  box-shadow: none; }
-
 .box.svelte-1g99z0g.svelte-1g99z0g {
   background: transparent;
   box-shadow: none; }
@@ -8201,3 +8197,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .content.svelte-1g99z0g .current.svelte-1g99z0g {
   float: right; }
+
+.box.svelte-mbc480 {
+  background: transparent;
+  box-shadow: none; }

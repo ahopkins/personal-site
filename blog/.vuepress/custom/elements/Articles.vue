@@ -3,14 +3,14 @@
     <Section title="Written">
       <div class="subtitle">
         <div style="float: right">
-          <a href="/blog" class="button">Read the blog</a>
+          <router-link to="/blog" class="button">Read the blog</router-link>
         </div>
         Some recent articles published on this blog
       </div>
       <div class="tile-wrapper full">
         <div class="tile" v-for="article in articles" :key="article.path">
           <div class="tile-box">
-            <a class="article" :href="article.path">
+            <router-link class="article" :to="article.path">
               <strong>{{ article.info.title }}</strong>
               <em>{{ article.info.excerpt }}</em>
               <div class="info">
@@ -55,7 +55,7 @@
                   {{ tag }}
                 </span>
               </div>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>

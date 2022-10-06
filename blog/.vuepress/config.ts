@@ -1,7 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme/theme.js";
 import { getDirname, path } from '@vuepress/utils'
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { searchPlugin } from "@vuepress/plugin-search";
 
 const __dirname = getDirname(import.meta.url)
@@ -23,13 +22,6 @@ export default defineUserConfig({
   theme,
 
   plugins: [
-    registerComponentsPlugin({
-      components: {
-        Content: path.resolve(__dirname, './custom/elements/Content.vue'),
-        Hero: path.resolve(__dirname, './custom/elements/Hero.vue'),
-        Articles: path.resolve(__dirname, './custom/elements/Articles.vue'),
-      },
-    }),
     searchPlugin(),
   ],
   alias: {
@@ -40,5 +32,5 @@ export default defineUserConfig({
       "./custom/sidebar/Sidebar.js"
     ),
   },
-  shouldPrefetch: true,
+  shouldPrefetch: false,
 });

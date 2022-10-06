@@ -1,21 +1,19 @@
 ---
-navbar: false
-sidebar: false
-breadcrumb: false
-pageInfo: false
-contributors: false
-editLink: false
-lastUpdated: false
-prev: false
-next: false
-comment: false
-footer: true
-containerClass: landing
-backtotop: false
+layout: Landing
+# navbar: false
+# sidebar: false
+# breadcrumb: false
+# pageInfo: false
+# contributors: false
+# editLink: false
+# lastUpdated: false
+# prev: false
+# next: false
+# comment: false
+# footer: true
+# backtotop: false
 article: false
 ---
-
-<Hero />
 
 ```python
 class Adam:
@@ -31,7 +29,3 @@ class Adam:
     def sleep(self):
         raise NotImplementedError
 ```
-
-
-<Articles />
-<Content />

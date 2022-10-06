@@ -1,5 +1,10 @@
 @import "./palette.scss";
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --font-family: Rubik, sans-serif;
     --font-family-fancy: Rubik, sans-serif;
@@ -16,9 +21,6 @@
     top: 0;
     left: 0;
 
-    // .wrapper {
-
-    // }
     &+.trailer {
         position: relative;
         height: 100vh;

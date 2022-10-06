@@ -47,11 +47,10 @@ export default hopeTheme({
     },
     comment: {
       provider: "Giscus",
-      repo: "ahopkins/amhopkins",
-      repoId: "R_kgDOIJAP1A",
+      repo: "ahopkins/personal-site",
+      repoId: "MDEwOlJlcG9zaXRvcnkxMDcxODQzMDY=",
       category: "Comments",
-      categoryId: "DIC_kwDOIJAP1M4CR0aS",
-      theme: "https://giscus.app/themes/light.css"
+      categoryId: "DIC_kwDOBmOAss4CR1uV"
     },
     mdEnhance: {
       // align: true,

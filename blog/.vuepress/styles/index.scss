@@ -1,5 +1,10 @@
 @import "./palette.scss";
 
+:root {
+    --font-family: Rubik, sans-serif;
+    --font-family-fancy: Rubik, sans-serif;
+}
+
 .blog-page-wrapper {
     margin: 2rem auto 0 !important;
 }

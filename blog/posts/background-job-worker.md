@@ -13,7 +13,7 @@ description: Get up and running with a background job worker entirely in Sanic
 ---
 
 ::: info Source code
-Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) that accompanies along with this post
+Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) that accompanies this post
 :::
 
 In the course of answering support questions for Sanic developers one of the most common questions I am asked relates to processing actions "in the background." In the course of developing a full-featured application it is highly likely that you will run into this problem at some point.

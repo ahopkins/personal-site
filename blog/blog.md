@@ -13,22 +13,20 @@ projects:
   - icon: book
     name: Python Web Dev with Sanic
     desc: Authored by me
-    link: https://link.to.your.book
+    link: https://sanicbook.com/
 
   - icon: /sanic.svg
     name: Sanic
     desc: Python web framework
-    link: https://link.to.your.friend
+    link: https://sanic.dev/en/
 
   - icon: /mayim.svg
     name: Mayim
     desc: Python not ORM hydrator
-    link: https://link.to.your.friend
+    link: https://ahopkins.github.io/mayim/
   
   - icon: github
     name: /ahopkins
     desc: My GitHub profile
-    link: https://link.address
-
-footer: customize your footer text
+    link: https://github.com/ahopkins
 ---

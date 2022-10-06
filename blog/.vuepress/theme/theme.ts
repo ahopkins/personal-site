@@ -9,7 +9,7 @@ export default hopeTheme({
   },
   iconAssets: "iconfont",
   logo: "/adam.svg",
-  repo: "ahopkins/amhopkins",
+  repo: "ahopkins/personal-site",
   docsDir: "docs",
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
   blog: {

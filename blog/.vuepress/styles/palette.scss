@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
+
+$sanic: #ff0d68ff;
+$blue: #0d6effff;
+$green: #39ea29ff;
+$orang: #ffb300ff;
+$yellow: #f1f116ff;
+$red: #ff0d4dff;
+$dark: #0a0a0aff;
+$less-dark: #111111ff;
+$charcoal: #242424ff;
+
+$theme-color: $sanic;
+$code-dark-theme: night-owl;
+
+$bg-color: $less-dark;
+$bg-color-back: $dark;
+$bg-color-float: $charcoal;
+$bg-color-light: $charcoal;
+$bg-color-active: $charcoal;
+$bg-color-blur: $less-dark;
+$bg-color-float-blur: $less-dark;
+
+$colors: (#ff0d68ff);
+
+$font-family: ("Rubik", sans-serif);
+$font-family-fancy: ("Rubik", sans-serif);
+
+
+div[class*="language-"] {
+    background-color: $dark;
+}

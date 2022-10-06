@@ -1,0 +1,96 @@
+@import "./palette.scss";
+
+.blog-page-wrapper {
+    margin: 2rem auto 0 !important;
+}
+
+.hero {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    // .wrapper {
+
+    // }
+    &+.trailer {
+        position: relative;
+        height: 100vh;
+        z-index: -1;
+        margin-bottom: 4rem;
+    }
+
+    .front-page {
+        position: absolute;
+        top: 0;
+        left: 3rem;
+        right: 3rem;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+
+        h1 {
+            font-weight: 600;
+            font-size: 3rem;
+            line-height: 1.125;
+            margin: 0;
+        }
+
+    }
+}
+
+.landing .page-title {
+    display: none;
+}
+
+.tile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    .tile {
+        flex: 0 0 calc(50% - 0.5em);
+
+        .tile-box {
+            border-radius: 6px;
+            background: #0a0a0a;
+            padding: 16px;
+            font-size: 1.1rem;
+
+            em {
+                font-style: normal;
+                font-weight: 100;
+                display: block;
+            }
+        }
+    }
+
+    &.full {
+        .tile {
+            flex: 1;
+        }
+    }
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    border-radius: 6px;
+    outline: none;
+    background: $sanic;
+    color: $dark;
+    font-size: 1.1rem;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.article .title {
+    font-weight: 700;
+    color: #ffffff;
+}

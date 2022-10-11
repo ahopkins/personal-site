@@ -13,7 +13,7 @@ type LayoutParentData = EnsureDefined<{}>;
 export type PageServerData = null;
 export type PageLoad<OutputData extends OutputDataShape<PageParentData> = OutputDataShape<PageParentData>> = Kit.Load<RouteParams, PageServerData, PageParentData, OutputData>;
 export type PageLoadEvent = Parameters<PageLoad>[0];
-export type PageData = Expand<Omit<PageParentData, keyof Kit.AwaitedProperties<Awaited<ReturnType<typeof import('../../../../node_modules/@sveltejs/kit/src/routes/+page.js').load>>>> & EnsureDefined<Kit.AwaitedProperties<Awaited<ReturnType<typeof import('../../../../node_modules/@sveltejs/kit/src/routes/+page.js').load>>>>>;
+export type PageData = Expand<Omit<PageParentData, keyof Kit.AwaitedProperties<Awaited<ReturnType<typeof import('../../../../src/routes/+page.js').load>>>> & EnsureDefined<Kit.AwaitedProperties<Awaited<ReturnType<typeof import('../../../../src/routes/+page.js').load>>>>>;
 export type LayoutServerData = null;
 export type LayoutLoad<OutputData extends Partial<App.PageData> & Record<string, any> | void = Partial<App.PageData> & Record<string, any> | void> = Kit.Load<LayoutParams, LayoutServerData, LayoutParentData, OutputData>;
 export type LayoutLoadEvent = Parameters<LayoutLoad>[0];

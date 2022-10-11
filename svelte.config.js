@@ -7,7 +7,15 @@ const config = {
     extensions: [".svelte", ...mdsvexConfig.extensions],
 
     kit: {
-        adapter: adapter(),
+        adapter: adapter({
+            pages: "docs",
+            assets: "docs"
+        }),
+    },
+
+    paths: {
+        // change below to your repo name
+        base: false ? "" : "/personal-site",
     },
 
     trailingSlash: "always",

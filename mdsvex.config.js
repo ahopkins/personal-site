@@ -2,7 +2,6 @@ import { defineMDSveXConfig as defineConfig } from "mdsvex"
 import addClasses from "rehype-add-classes"
 import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import admonition from "./src/lib/styles/md/admonition.js"
 import { h } from "hastscript"
 import remarkToc from "remark-toc"
 
@@ -15,7 +14,8 @@ const config = defineConfig({
         dashes: "inverted",
     },
 
-    remarkPlugins: [admonition, remarkToc],
+    // remarkPlugins: [admonition, remarkToc],
+    remarkPlugins: [remarkToc],
     rehypePlugins: [
         [
             addClasses,

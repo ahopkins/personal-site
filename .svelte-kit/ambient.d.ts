@@ -116,7 +116,6 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const OLDPWD: string;
 	export const GOPATH: string;
-	export const NODE_ENV: string;
 }
 
 /**
@@ -236,7 +235,6 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		OLDPWD: string;
 		GOPATH: string;
-		NODE_ENV: string;
 		[key: string]: string | undefined;
 	}
 }

@@ -20,7 +20,7 @@ description: Get up and running with a background job worker entirely in Sanic
 ## Introduction
 
 <Block title="Source code">
-Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) that accompanies this post.
+Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/code/background-job-worker) that accompanies this post.
 </Block>
 
 In the course of answering support questions for Sanic developers one of the most common questions I am asked relates to processing actions "in the background." In the course of developing a full-featured application it is highly likely that you will run into this problem at some point.
@@ -127,7 +127,7 @@ def worker(saje_queue: Queue) -> None:
     ...
 ```
 
-_Feel free to jump to the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) to see it in full._
+_Feel free to jump to the [source code](https://github.com/ahopkins/personal-site/tree/main/code/background-job-worker) to see it in full._
 
 ## Sharing the queue to Sanic workers
 
@@ -196,7 +196,7 @@ worker-->results(Results)
 
 ## Wrap-up and next steps
 
-There obviously are a lot of steps here that I glossed over. The `worker` function mentioned above for example. I suggest you take a look at the content in the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) to see how that works.
+There obviously are a lot of steps here that I glossed over. The `worker` function mentioned above for example. I suggest you take a look at the content in the [source code](https://github.com/ahopkins/personal-site/tree/main/code/background-job-worker) to see how that works.
 
 Our goal here was to examine how to use the new worker manager feature in Sanic to coordinate the sharing of data from worker processes to a custom background process. Obviously, a secondary hope was to show how you could build out a robust platform to handle your own background processing needs entirely within Sanic.
 

@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set([".nojekyll","CNAME","favicon.png","images/adam-unified.svg","images/adam.svg","images/mayim.svg","images/osi.png","images/sanic-framework-logo-circle-32x32.png","images/sanic.svg"]),
 	mimeTypes: {".png":"image/png",".svg":"image/svg+xml"},
 	_: {
-		entry: {"file":"_app/immutable/start-a82a6299.js","imports":["_app/immutable/start-a82a6299.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js","_app/immutable/chunks/index-93917c68.js","_app/immutable/chunks/singletons-afe998ea.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-3d155087.js","imports":["_app/immutable/start-3d155087.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js","_app/immutable/chunks/index-93917c68.js","_app/immutable/chunks/singletons-3555ebb0.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

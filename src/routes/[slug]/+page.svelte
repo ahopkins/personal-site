@@ -1,79 +1,86 @@
 <script>
-    import { onMount } from "svelte"
-    import { readingTime } from "reading-time-estimator"
-    import Time from "svelte-time"
-    import Giscus from "@giscus/svelte"
-    export let data
+    import { onMount } from "svelte";
+    import { readingTime } from "reading-time-estimator";
+    import Time from "svelte-time";
+    import Giscus from "@giscus/svelte";
+    import { addCopy } from "$lib/utilities/copy";
+    export let data;
 
-    const { meta, body } = data
-    let timeToRead = ""
+    const { meta, body } = data;
+    let timeToRead = "";
 
     /**
      * @param {Node} node
      */
     const _extract = (node) => {
-        const output = {}
-        let link = node.firstChild
+        const output = {};
+        let link = node.firstChild;
         if (link && link.nodeName === "P") {
-            link = link.firstChild
+            link = link.firstChild;
         }
-        output.text = link?.textContent
+        output.text = link?.textContent;
 
         // @ts-ignore
-        output.href = link?.getAttributeNode("href")?.textContent
-        const nested = [...node.childNodes].filter((item) => item.nodeName === "UL" )
+        output.href = link?.getAttributeNode("href")?.textContent;
+        const nested = [...node.childNodes].filter(
+            (item) => item.nodeName === "UL"
+        );
         if (nested.length) {
-            output.children = extractToc(nested[0])
+            output.children = extractToc(nested[0]);
         }
-        return output
-    }
+        return output;
+    };
 
     /**
      * @param {Node} toc
      */
     const extractToc = (toc) => {
-        return [...toc.childNodes].filter(x => x.nodeName === "LI").map(_extract)
-    }
+        return [...toc.childNodes]
+            .filter((x) => x.nodeName === "LI")
+            .map(_extract);
+    };
 
     const inject = (node, item) => {
-        const outer = document.createElement("div")
-        const newLink = document.createElement('a')
-        outer.className = "navbar-item"
-        newLink.href = item.href
-        newLink.text = item.text
-        outer.appendChild(newLink)
+        const outer = document.createElement("div");
+        const newLink = document.createElement("a");
+        outer.className = "navbar-item";
+        newLink.href = item.href;
+        newLink.text = item.text;
+        outer.appendChild(newLink);
         if (item.children?.length) {
-            const wrapper = document.createElement("div")
-            wrapper.className = "navbar-indent"
-            item.children.forEach((child) => inject(wrapper,child))
-            outer.appendChild(wrapper)
+            const wrapper = document.createElement("div");
+            wrapper.className = "navbar-indent";
+            item.children.forEach((child) => inject(wrapper, child));
+            outer.appendChild(wrapper);
         }
-        node.appendChild(outer)
-    }
+        node.appendChild(outer);
+    };
 
     onMount(() => {
-        const content = document.querySelector(".content")?.textContent
+        const content = document.querySelector(".content")?.textContent;
         if (content) {
-            timeToRead = readingTime(content).text
+            timeToRead = readingTime(content).text;
         }
-        const toc = document.querySelector("#table-of-contents+ul")
-        const articleMenuTitle = document.querySelector("#article-menu-title")
-        const articleMenuContent = document.querySelector("#article-menu-content")
+        const toc = document.querySelector("#table-of-contents+ul");
+        const articleMenuTitle = document.querySelector("#article-menu-title");
+        const articleMenuContent = document.querySelector(
+            "#article-menu-content"
+        );
         if (articleMenuTitle) {
-            articleMenuTitle.innerHTML = meta.title
+            articleMenuTitle.innerHTML = meta.title;
         }
         if (articleMenuContent) {
-            articleMenuContent.replaceChildren()
+            articleMenuContent.replaceChildren();
             if (toc) {
-                const structured =extractToc(toc)
-                structured.forEach(item => {
-                    inject(articleMenuContent, item)
-                })
+                const structured = extractToc(toc);
+                structured.forEach((item) => {
+                    inject(articleMenuContent, item);
+                });
             }
         }
-    })
+        addCopy();
+    });
 </script>
-
 
 <article>
     <div class="article-container container is-max-desktop">
@@ -82,17 +89,17 @@
 
         <div class="article-info">
             <div class="date">
-                <i class="las la-calendar"></i>
+                <i class="las la-calendar" />
                 <Time timestamp={meta.date} live relative format="YYYY-MM-DD" />
             </div>
             <div class="tags">
-                <i class="las la-tags"></i>
+                <i class="las la-tags" />
                 {#each meta.tag as tag}
                     <span class="tag is-dark">{tag}</span>
                 {/each}
             </div>
             <div class="read-time">
-                <i class="las la-hourglass"></i>
+                <i class="las la-hourglass" />
                 {timeToRead}
             </div>
         </div>

@@ -11,13 +11,17 @@ description: Get up and running with a background job worker entirely in Sanic
 
 <script>
     import Mermaid from "../lib/components/Mermaid.svelte";
+    import Block from "../lib/components/Block.svelte";
 </script>
 
 ## Table of contents
 
-:::info Source code
-Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) that accompanies along with this post
-:::
+
+## Introduction
+
+<Block title="Source code">
+Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) that accompanies this post.
+</Block>
 
 In the course of answering support questions for Sanic developers one of the most common questions I am asked relates to processing actions "in the background." In the course of developing a full-featured application it is highly likely that you will run into this problem at some point.
 
@@ -73,9 +77,9 @@ async def start(app: Sanic):
     app.shared_ctx.saje_queue = manager.Queue()
 ```
 
-::: info
+<Block type="is-info">
 You should beware that only objects that are safe for sharing with `multiprocessing.Process` should be attached to `app.shared_ctx`. For example, if you attached a regular `dict` object, it's state **will not** be shared across application workers.
-:::
+</Block>
 
 Once the `Queue` is setup, we can tell Sanic to [manage a custom process](https://sanic.dev/en/guide/deployment/manager.html#running-custom-processes). This also must be done at a very specific time: the `@app.main_process_ready` listener.
 
@@ -123,7 +127,7 @@ def worker(saje_queue: Queue) -> None:
     ...
 ```
 
-\_Feel free to jump to the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) to see it in full\_
+_Feel free to jump to the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) to see it in full._
 
 ## Sharing the queue to Sanic workers
 

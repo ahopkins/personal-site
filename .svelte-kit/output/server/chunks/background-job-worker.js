@@ -1,4 +1,5 @@
-import { c as create_ssr_component, f as add_attribute, v as validate_component } from "./index.js";
+import { c as create_ssr_component, f as add_attribute, e as escape, v as validate_component } from "./index.js";
+import mermaid from "mermaid";
 const Mermaid_svelte_svelte_type_style_lang = "";
 const css = {
   code: "pre.svelte-dw01c0{background-color:#242424}.mermaid .label{font-size:0.95rem;font-family:Rubik, sans-serif;color:#a0a0a0}",
@@ -6,10 +7,22 @@ const css = {
 };
 const Mermaid = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let chart = null;
+  mermaid.initialize({ startOnLoad: false, theme: "dark" });
   $$result.css.add(css);
-  return `<div class="${"mermaid"}"><pre class="${"svelte-dw01c0"}"${add_attribute("this", chart, 0)}>        
+  return `<div class="${"mermaid"}"><pre class="${"svelte-dw01c0"}"${add_attribute("this", chart, 0)}>        ${slots.default ? slots.default({}) : ``}
     </pre>
 </div>`;
+});
+const Block = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { title = "" } = $$props;
+  let { type = "is-dark" } = $$props;
+  let span;
+  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+    $$bindings.title(title);
+  if ($$props.type === void 0 && $$bindings.type && type !== void 0)
+    $$bindings.type(type);
+  return `<div${add_attribute("class", `notification ${type}`, 0)}>${title ? `<h5>${escape(title)}</h5>` : ``}
+    <span${add_attribute("this", span, 0)}>${slots.default ? slots.default({}) : ``}</span></div>`;
 });
 const metadata = {
   "date": "2022-10-09T00:00:00.000Z",
@@ -19,13 +32,30 @@ const metadata = {
 };
 const Background_job_worker = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h2 class="${"is-size-2"}" id="${"table-of-contents"}">Table of contents<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#table-of-contents"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h2>
-<ul><li><p><a href="${"#overview-of-the-concept"}">Overview of the concept</a></p>
+<ul><li><p><a href="${"#introduction"}">Introduction</a></p></li>
+<li><p><a href="${"#overview-of-the-concept"}">Overview of the concept</a></p>
 <ul><li><a href="${"#background-on-saje"}">Background on SAJE</a></li>
 <li><a href="${"#solving-for-this-with-v229-workers"}">Solving for this with v22.9 workers</a></li></ul></li>
 <li><p><a href="${"#adding-a-managed-process"}">Adding a managed process</a></p></li>
 <li><p><a href="${"#sharing-the-queue-to-sanic-workers"}">Sharing the queue to Sanic workers</a></p></li>
 <li><p><a href="${"#pushing-work-from-an-endpoint"}">Pushing work from an endpoint</a></p></li>
 <li><p><a href="${"#wrap-up-and-next-steps"}">Wrap-up and next steps</a></p></li></ul>
+<h2 class="${"is-size-2"}" id="${"introduction"}">Introduction<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#introduction"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h2>
+${validate_component(Block, "Block").$$render($$result, { title: "Source code" }, {}, {
+    default: () => {
+      return `Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) that accompanies this post.
+`;
+    }
+  })}
+<p>In the course of answering support questions for Sanic developers one of the most common questions I am asked relates to processing actions \u201Cin the background.\u201D In the course of developing a full-featured application it is highly likely that you will run into this problem at some point.</p>
+<blockquote><p><strong>Problem</strong>: Some endpoint accepts input and needs to do some work on it. But, that work is slow and should not block the return of the response. What to do?</p></blockquote>
+<p>It has become rather axiomatic that I answer the question in one of three ways:</p>
+<ol><li>link to the <a href="${"https://sanic.dev/en/guide/basics/tasks.html"}" rel="${"nofollow"}">Background tasks</a> section of the Sanic User Guide;</li>
+<li>link to a <a href="${"https://github.com/ahopkins/pyconil2021-liberate-your-api"}" rel="${"nofollow"}">presentation I gave</a> at PyConIL in 2021; and/or</li>
+<li>if the person <a href="${"https://sanicbook.com/"}" rel="${"nofollow"}">owns a copy of my book</a>, refer them to <code>Background task processing</code> on page 229.</li></ol>
+<p>When writing the Sanic User Guide, I intentially included <code>Background tasks</code> under the <code>Basics</code> category because, well, I believe it is a fundamental and important piece of knowledge when building with Sanic. It is a powerful tool for async applications and the concept is precisely what async frameworks like Sanic are built upon.</p>
+<p>However, an <a href="${"https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"}" rel="${"nofollow"}"><code>asyncio.Task</code></a> is not always the most appropriate solution. Indeed this is precisely what both the above linked presentation and section in my book discuss. Both attempt to find solutions to answer the question: <em>what do I do when I need something more powerful?</em></p>
+<p>In this article, I want to propose another solution using an exciting new feature of <a href="${"https://sanic.dev/en/guide/release-notes/v22.9.html"}" rel="${"nofollow"}">Sanic v22.9</a>: managed processes.</p>
 <h2 class="${"is-size-2"}" id="${"overview-of-the-concept"}">Overview of the concept<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#overview-of-the-concept"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h2>
 <h3 class="${"is-size-3"}" id="${"background-on-saje"}">Background on SAJE<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#background-on-saje"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h3>
 <p>In my 2021 talk I proposed a solution that I called: <strong>SAJE</strong> (Sanic asynchronous job executor). The idea was to launch a background process that exposed a <a href="${"https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue"}" rel="${"nofollow"}"><code>multiprocessing.Queue</code></a>. From inside of an endpoint we would push data to the queue and let the SAJE process pick it up and assign the work. The endpoint would have return some sort of an identifier. With the results and state of the execution stored <em>somewhere</em>, we could then fetch information about that job using the identifier.</p>
@@ -49,9 +79,12 @@ const Background_job_worker = create_ssr_component(($$result, $$props, $$binding
 <span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">start</span><span class="token punctuation">(</span>app<span class="token punctuation">:</span> Sanic<span class="token punctuation">)</span><span class="token punctuation">:</span>
     manager <span class="token operator">=</span> Manager<span class="token punctuation">(</span><span class="token punctuation">)</span>
     app<span class="token punctuation">.</span>shared_ctx<span class="token punctuation">.</span>saje_queue <span class="token operator">=</span> manager<span class="token punctuation">.</span>Queue<span class="token punctuation">(</span><span class="token punctuation">)</span></code>`}<!-- HTML_TAG_END --></pre>
-<p>::: info
-You should beware that only objects that are safe for sharing with <code>multiprocessing.Process</code> should be attached to <code>app.shared_ctx</code>. For example, if you attached a regular <code>dict</code> object, it\u2019s state <strong>will not</strong> be shared across application workers.
-:::</p>
+${validate_component(Block, "Block").$$render($$result, { type: "is-info" }, {}, {
+    default: () => {
+      return `You should beware that only objects that are safe for sharing with \`multiprocessing.Process\` should be attached to \`app.shared_ctx\`. For example, if you attached a regular \`dict\` object, it&#39;s state **will not** be shared across application workers.
+`;
+    }
+  })}
 <p>Once the <code>Queue</code> is setup, we can tell Sanic to <a href="${"https://sanic.dev/en/guide/deployment/manager.html#running-custom-processes"}" rel="${"nofollow"}">manage a custom process</a>. This also must be done at a very specific time: the <code>@app.main_process_ready</code> listener.</p>
 <pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>main_process_ready</span>
 <span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">ready</span><span class="token punctuation">(</span>app<span class="token punctuation">:</span> Sanic<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -83,7 +116,7 @@ You should beware that only objects that are safe for sharing with <code>multipr
 <p>For now, don\u2019t worry too much about what <code>worker</code> is. All you need to care about right now is that it is a function that roughly lookes like this:</p>
 <pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">def</span> <span class="token function">worker</span><span class="token punctuation">(</span>saje_queue<span class="token punctuation">:</span> Queue<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code>`}<!-- HTML_TAG_END --></pre>
-<p>_Feel free to jump to the <a href="${"https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker"}" rel="${"nofollow"}">source code</a> to see it in full_</p>
+<p><em>Feel free to jump to the <a href="${"https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker"}" rel="${"nofollow"}">source code</a> to see it in full.</em></p>
 <h2 class="${"is-size-2"}" id="${"sharing-the-queue-to-sanic-workers"}">Sharing the queue to Sanic workers<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#sharing-the-queue-to-sanic-workers"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h2>
 <p>Since the <code>Queue</code> will be the main conduit for triggering work, we need some sort of client that will be available to the Sanic workers.</p>
 <pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">from</span> multiprocessing <span class="token keyword">import</span> Queue

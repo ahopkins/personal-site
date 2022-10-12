@@ -14,7 +14,6 @@ const config = defineConfig({
         dashes: "inverted",
     },
 
-    // remarkPlugins: [admonition, remarkToc],
     remarkPlugins: [remarkToc],
     rehypePlugins: [
         [

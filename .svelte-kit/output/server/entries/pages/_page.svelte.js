@@ -57,7 +57,7 @@ const Written = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<div class="${"subtitle"}">Some blog articles you can find on this site</div>
     <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(articles, (article) => {
-        return `<div class="${"tile is-child is-6 box article-list"}"><a${add_attribute("href", `/${article.slug}`, 0)} class="${"content"}"><h5 class="${"is-size-4"}">${escape(article.title)}</h5>
+        return `<div class="${"tile is-child is-12 box article-list"}"><a${add_attribute("href", `/${article.slug}`, 0)} class="${"content"}"><h5 class="${"is-size-4"}">${escape(article.title)}</h5>
                         <em>${escape(article.description)}</em>
                         <div class="${"article-info"}"><div class="${"date"}"><i class="${"las la-calendar"}"></i>
                                 ${validate_component(Time, "Time").$$render(
@@ -83,7 +83,7 @@ const Written = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const RepoCard_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: ".repo-card.svelte-xp3wxt.svelte-xp3wxt{display:block;box-shadow:none;background:#111111;border-radius:6px;padding:1.25em;line-height:1.5;color:var(--svc-text-primary, #586069);min-height:140px}.repo-card.svelte-xp3wxt.svelte-xp3wxt:hover{text-decoration:none}.repo-card.svelte-xp3wxt .repo-title.svelte-xp3wxt{color:#eeeeee;font-weight:700}.repo-card.svelte-xp3wxt:hover .repo-title.svelte-xp3wxt{color:#ff0d68;text-decoration:underline}.repo-info.svelte-xp3wxt .language.svelte-xp3wxt{display:inline-block;width:1rem;height:1rem;border-radius:100%}",
+  code: ".repo-card.svelte-eh4fom.svelte-eh4fom{position:relative;display:block;box-shadow:none;background:#111111;border-radius:6px;padding:1.25em;line-height:1.5;color:var(--svc-text-primary, #586069);min-height:165px}.repo-card.svelte-eh4fom.svelte-eh4fom:hover{text-decoration:none}.repo-card.svelte-eh4fom .repo-title.svelte-eh4fom{color:#eeeeee;font-weight:700}.repo-card.svelte-eh4fom:hover .repo-title.svelte-eh4fom{color:#ff0d68;text-decoration:underline}.repo-info.svelte-eh4fom.svelte-eh4fom{position:absolute;bottom:1.25rem}.repo-info.svelte-eh4fom .language.svelte-eh4fom{display:inline-block;width:1rem;height:1rem;border-radius:100%}",
   map: null
 };
 const RepoCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -91,7 +91,7 @@ const RepoCard = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   if ($$props.slug === void 0 && $$bindings.slug && slug !== void 0)
     $$bindings.slug(slug);
   $$result.css.add(css$5);
-  return `<a${add_attribute("href", `https://github.com/${slug}`, 0)} class="${"content repo-card svelte-xp3wxt"}" target="${"_blank"}">${``}
+  return `<a${add_attribute("href", `https://github.com/${slug}`, 0)} class="${"content repo-card svelte-eh4fom"}" target="${"_blank"}">${``}
 </a>`;
 });
 const Built_svelte_svelte_type_style_lang = "";
@@ -113,7 +113,7 @@ const Built = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<div class="${"subtitle"}">Some open source projects I maintain</div>
     <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(repos, (slug) => {
-        return `<div class="${"tile is-child is-4 box svelte-1ocv4w7"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
+        return `<div class="${"tile is-child is-6 box svelte-1ocv4w7"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
                 </div>`;
       })}</div></div>`;
     }
@@ -137,7 +137,7 @@ const Said = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"subtitle"}">Some presentations I&#39;ve given at tech conferences
     </div>
     <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(repos, (slug) => {
-        return `<div class="${"tile is-child is-4 box svelte-mbc480"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
+        return `<div class="${"tile is-child is-6 box svelte-mbc480"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
                 </div>`;
       })}</div></div>`;
     }
@@ -145,7 +145,7 @@ const Said = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Done_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".content.svelte-10kz2qc .current.svelte-10kz2qc{float:right}.box.svelte-10kz2qc.svelte-10kz2qc{background:transparent;box-shadow:none}.content.svelte-10kz2qc.svelte-10kz2qc{display:block;box-shadow:none;background:#111111;border-radius:6px;padding:1.25em;line-height:1.5;color:var(--svc-text-primary, #586069)}.content.svelte-10kz2qc strong.svelte-10kz2qc{display:block}",
+  code: ".content.svelte-ckjdv8 .current.svelte-ckjdv8{float:right}.box.svelte-ckjdv8.svelte-ckjdv8{background:transparent;box-shadow:none}.content.svelte-ckjdv8.svelte-ckjdv8{display:block;box-shadow:none;background:#111111;border-radius:6px;padding:1.25em;line-height:1.5;color:var(--svc-text-primary, #586069)}.content.svelte-ckjdv8 strong.svelte-ckjdv8{display:block}",
   map: null
 };
 const Done = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -175,8 +175,8 @@ const Done = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<div class="${"subtitle"}">Some roles I&#39;ve had in the past</div>
     <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(work, (position) => {
-        return `<div class="${"tile is-child is-4 box svelte-10kz2qc"}"><div class="${"content svelte-10kz2qc"}">${position.current ? `<div class="${"current svelte-10kz2qc"}">\u{1F31F}</div>` : ``}
-                        <strong class="${"svelte-10kz2qc"}">${escape(position.title)}</strong>
+        return `<div class="${"tile is-child is-6 box svelte-ckjdv8"}"><div class="${"content svelte-ckjdv8"}">${position.current ? `<div class="${"current svelte-ckjdv8"}">\u{1F31F}</div>` : ``}
+                        <strong class="${"svelte-ckjdv8"}">${escape(position.title)}</strong>
                         ${escape(position.company)}</div>
                 </div>`;
       })}</div></div>`;
@@ -216,13 +216,28 @@ const Book = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         </div></div>
 </section>`;
 });
+const Home = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Adam</span><span class="token punctuation">:</span>
+    work <span class="token operator">=</span> PacketFabric<span class="token punctuation">(</span><span class="token string">"Director of Software Engineering"</span><span class="token punctuation">)</span>
+    oss <span class="token operator">=</span> Sanic<span class="token punctuation">(</span><span class="token string">"Core Maintainer"</span><span class="token punctuation">)</span>
+    home <span class="token operator">=</span> Israel<span class="token punctuation">(</span><span class="token string">"Negev"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">:</span> Union<span class="token punctuation">[</span>Pretzels<span class="token punctuation">,</span> Coffee<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token keyword">await</span> self<span class="token punctuation">.</span>work<span class="token punctuation">.</span>do<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+            <span class="token keyword">await</span> self<span class="token punctuation">.</span>oss<span class="token punctuation">.</span>do<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+        
+    <span class="token keyword">def</span> <span class="token function">sleep</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> NotImplementedError</code>`}<!-- HTML_TAG_END --></pre>`;
+});
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   return `<main>${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
 	${validate_component(Book, "Book").$$render($$result, {}, {}, {})}
-	${validate_component(Content, "Content").$$render($$result, { articles: data.articles }, {}, {})}
+	<div class="${"container is-max-desktop mb-8"}"><div class="${"mb-8"}">${validate_component(Home, "Home").$$render($$result, {}, {}, {})}</div>
+		${validate_component(Content, "Content").$$render($$result, { articles: data.articles }, {}, {})}</div>
 	${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</main>`;
 });
 export {

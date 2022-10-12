@@ -1,6 +1,5 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
 import { F as Footer } from "../../../chunks/Footer.js";
-const prismOkaidia = "";
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".navbar-menu.svelte-16903xz.svelte-16903xz,.navbar.svelte-16903xz.svelte-16903xz{background-color:#111111}.navbar-item.has-dropdown.svelte-16903xz:focus .navbar-link.svelte-16903xz,.navbar-item.has-dropdown.svelte-16903xz:hover .navbar-link.svelte-16903xz,.navbar-dropdown.svelte-16903xz.svelte-16903xz,.navbar-item.has-dropdown.svelte-16903xz.svelte-16903xz:hover,.navbar-link.svelte-16903xz.svelte-16903xz:hover,a.navbar-item.svelte-16903xz.svelte-16903xz:hover{background-color:#111111 !important;color:#a0a0a0 !important;border-top-color:#111111}.navbar-link.svelte-16903xz.svelte-16903xz::after{border-color:#a0a0a0}.navbar-dropdown >  .navbar-item{align-items:flex-start;display:flex;flex-direction:column}",

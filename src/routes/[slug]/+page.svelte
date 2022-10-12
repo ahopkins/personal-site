@@ -66,6 +66,11 @@
         const articleMenuContent = document.querySelector(
             "#article-menu-content"
         );
+        const adam = document.createElement("img");
+        adam.setAttribute("alt", "Adam Hopkins");
+        adam.setAttribute("src", "/images/adam.svg");
+        toc.prepend(adam);
+
         if (articleMenuTitle) {
             articleMenuTitle.innerHTML = meta.title;
         }

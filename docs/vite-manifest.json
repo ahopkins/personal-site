@@ -11,13 +11,13 @@
     "file": "_app/immutable/assets/rubik-cyrillic-ext-300-normal-e2e1986b.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-cyrillic-ext-300-normal.woff2"
   },
-  "node_modules/@fontsource/rubik/files/rubik-hebrew-300-normal.woff2": {
-    "file": "_app/immutable/assets/rubik-hebrew-300-normal-b8af7930.woff2",
-    "src": "node_modules/@fontsource/rubik/files/rubik-hebrew-300-normal.woff2"
-  },
   "node_modules/@fontsource/rubik/files/rubik-cyrillic-300-normal.woff2": {
     "file": "_app/immutable/assets/rubik-cyrillic-300-normal-270e74de.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-cyrillic-300-normal.woff2"
+  },
+  "node_modules/@fontsource/rubik/files/rubik-hebrew-300-normal.woff2": {
+    "file": "_app/immutable/assets/rubik-hebrew-300-normal-b8af7930.woff2",
+    "src": "node_modules/@fontsource/rubik/files/rubik-hebrew-300-normal.woff2"
   },
   "node_modules/@fontsource/rubik/files/rubik-latin-ext-300-normal.woff2": {
     "file": "_app/immutable/assets/rubik-latin-ext-300-normal-953ebfb7.woff2",
@@ -39,33 +39,33 @@
     "file": "_app/immutable/assets/rubik-hebrew-400-normal-300c9f68.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-hebrew-400-normal.woff2"
   },
-  "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot": {
-    "file": "_app/immutable/assets/la-solid-900-8a57f8a9.eot",
-    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot"
-  },
-  "node_modules/@fontsource/rubik/files/rubik-cyrillic-ext-700-normal.woff2": {
-    "file": "_app/immutable/assets/rubik-cyrillic-ext-700-normal-452507b6.woff2",
-    "src": "node_modules/@fontsource/rubik/files/rubik-cyrillic-ext-700-normal.woff2"
-  },
   "node_modules/@fontsource/rubik/files/rubik-latin-ext-400-normal.woff2": {
     "file": "_app/immutable/assets/rubik-latin-ext-400-normal-bc5e3f53.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-latin-ext-400-normal.woff2"
+  },
+  "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot": {
+    "file": "_app/immutable/assets/la-solid-900-8a57f8a9.eot",
+    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot"
   },
   "node_modules/@fontsource/rubik/files/rubik-latin-400-normal.woff2": {
     "file": "_app/immutable/assets/rubik-latin-400-normal-f1e0d25f.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-latin-400-normal.woff2"
   },
+  "node_modules/@fontsource/rubik/files/rubik-cyrillic-ext-700-normal.woff2": {
+    "file": "_app/immutable/assets/rubik-cyrillic-ext-700-normal-452507b6.woff2",
+    "src": "node_modules/@fontsource/rubik/files/rubik-cyrillic-ext-700-normal.woff2"
+  },
   "node_modules/@fontsource/rubik/files/rubik-cyrillic-700-normal.woff2": {
     "file": "_app/immutable/assets/rubik-cyrillic-700-normal-facc1007.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-cyrillic-700-normal.woff2"
   },
-  "node_modules/@fontsource/rubik/files/rubik-latin-ext-700-normal.woff2": {
-    "file": "_app/immutable/assets/rubik-latin-ext-700-normal-9dce73c5.woff2",
-    "src": "node_modules/@fontsource/rubik/files/rubik-latin-ext-700-normal.woff2"
-  },
   "node_modules/@fontsource/rubik/files/rubik-hebrew-700-normal.woff2": {
     "file": "_app/immutable/assets/rubik-hebrew-700-normal-40e66951.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-hebrew-700-normal.woff2"
+  },
+  "node_modules/@fontsource/rubik/files/rubik-latin-ext-700-normal.woff2": {
+    "file": "_app/immutable/assets/rubik-latin-ext-700-normal-9dce73c5.woff2",
+    "src": "node_modules/@fontsource/rubik/files/rubik-latin-ext-700-normal.woff2"
   },
   "node_modules/@fontsource/rubik/files/rubik-latin-700-normal.woff2": {
     "file": "_app/immutable/assets/rubik-latin-700-normal-449e0e19.woff2",
@@ -75,6 +75,10 @@
     "file": "_app/immutable/assets/la-regular-400-51ca2c00.woff2",
     "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-regular-400.woff2"
   },
+  "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.woff2": {
+    "file": "_app/immutable/assets/la-brands-400-ff70c9bc.woff2",
+    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.woff2"
+  },
   "node_modules/@fontsource/rubik/files/rubik-all-300-normal.woff": {
     "file": "_app/immutable/assets/rubik-all-300-normal-b82bb8cd.woff",
     "src": "node_modules/@fontsource/rubik/files/rubik-all-300-normal.woff"
@@ -82,10 +86,6 @@
   "node_modules/@fontsource/rubik/files/rubik-all-400-normal.woff": {
     "file": "_app/immutable/assets/rubik-all-400-normal-5b7083a0.woff",
     "src": "node_modules/@fontsource/rubik/files/rubik-all-400-normal.woff"
-  },
-  "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.woff2": {
-    "file": "_app/immutable/assets/la-brands-400-ff70c9bc.woff2",
-    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.woff2"
   },
   "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.woff2": {
     "file": "_app/immutable/assets/la-solid-900-10a68e01.woff2",
@@ -132,13 +132,13 @@
     "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.svg"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-07db80bd.js",
+    "file": "_app/immutable/start-c031a748.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-aa6bc0ce.js",
       "_index-93917c68.js",
-      "_singletons-0d4dbc83.js"
+      "_singletons-6dd77aa4.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -157,12 +157,12 @@
     ]
   },
   "src/routes/+error.svelte": {
-    "file": "_app/immutable/components/pages/_error.svelte-875cdb39.js",
+    "file": "_app/immutable/components/pages/_error.svelte-862998f4.js",
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
       "_index-93917c68.js",
-      "_singletons-0d4dbc83.js"
+      "_singletons-6dd77aa4.js"
     ]
   },
   "src/routes/[slug]/+layout.svelte": {
@@ -191,7 +191,7 @@
     ]
   },
   "src/routes/[slug]/+page.svelte": {
-    "file": "_app/immutable/components/pages/_slug_/_page.svelte-0fe108b7.js",
+    "file": "_app/immutable/components/pages/_slug_/_page.svelte-ffcecc89.js",
     "src": "src/routes/[slug]/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -229,8 +229,8 @@
       "__page-921c8f99.js"
     ]
   },
-  "_singletons-0d4dbc83.js": {
-    "file": "_app/immutable/chunks/singletons-0d4dbc83.js",
+  "_singletons-6dd77aa4.js": {
+    "file": "_app/immutable/chunks/singletons-6dd77aa4.js",
     "imports": [
       "_index-93917c68.js"
     ]
@@ -250,7 +250,7 @@
       "_index-93917c68.js"
     ],
     "css": [
-      "_app/immutable/assets/Footer-ba8396cd.css"
+      "_app/immutable/assets/Footer-a2b1166d.css"
     ],
     "assets": [
       "_app/immutable/assets/la-brands-400-c0e32387.eot",
@@ -322,7 +322,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-45cb158d.js",
+    "file": "_app/immutable/chunks/1-ef2be086.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -347,7 +347,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-f651de0c.js",
+    "file": "_app/immutable/chunks/4-c6dc1c8f.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
@@ -384,7 +384,7 @@
     "src": "src/routes/+page.css"
   },
   "Footer.css": {
-    "file": "_app/immutable/assets/Footer-ba8396cd.css",
+    "file": "_app/immutable/assets/Footer-a2b1166d.css",
     "src": "Footer.css"
   }
 }

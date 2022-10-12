@@ -16,7 +16,6 @@ description: Get up and running with a background job worker entirely in Sanic
 
 ## Table of contents
 
-
 ## Introduction
 
 <Block title="Source code">

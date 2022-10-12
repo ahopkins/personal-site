@@ -43,7 +43,7 @@ const Background_job_worker = create_ssr_component(($$result, $$props, $$binding
 <h2 class="${"is-size-2"}" id="${"introduction"}">Introduction<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#introduction"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h2>
 ${validate_component(Block, "Block").$$render($$result, { title: "Source code" }, {}, {
     default: () => {
-      return `Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker) that accompanies this post.
+      return `Check out the [source code](https://github.com/ahopkins/personal-site/tree/main/code/background-job-worker) that accompanies this post.
 `;
     }
   })}
@@ -116,7 +116,7 @@ ${validate_component(Block, "Block").$$render($$result, { type: "is-info" }, {},
 <p>For now, don\u2019t worry too much about what <code>worker</code> is. All you need to care about right now is that it is a function that roughly lookes like this:</p>
 <pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">def</span> <span class="token function">worker</span><span class="token punctuation">(</span>saje_queue<span class="token punctuation">:</span> Queue<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code>`}<!-- HTML_TAG_END --></pre>
-<p><em>Feel free to jump to the <a href="${"https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker"}" rel="${"nofollow"}">source code</a> to see it in full.</em></p>
+<p><em>Feel free to jump to the <a href="${"https://github.com/ahopkins/personal-site/tree/main/code/background-job-worker"}" rel="${"nofollow"}">source code</a> to see it in full.</em></p>
 <h2 class="${"is-size-2"}" id="${"sharing-the-queue-to-sanic-workers"}">Sharing the queue to Sanic workers<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#sharing-the-queue-to-sanic-workers"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h2>
 <p>Since the <code>Queue</code> will be the main conduit for triggering work, we need some sort of client that will be available to the Sanic workers.</p>
 <pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">from</span> multiprocessing <span class="token keyword">import</span> Queue
@@ -165,7 +165,7 @@ worker--&gt;results(Results)
     }
   })}
 <h2 class="${"is-size-2"}" id="${"wrap-up-and-next-steps"}">Wrap-up and next steps<a aria-hidden="${"true"}" tabindex="${"-1"}" href="${"#wrap-up-and-next-steps"}"><i class="${"las la-link"}" aria-hidden="${"true"}"></i></a></h2>
-<p>There obviously are a lot of steps here that I glossed over. The <code>worker</code> function mentioned above for example. I suggest you take a look at the content in the <a href="${"https://github.com/ahopkins/personal-site/tree/main/src/background-job-worker"}" rel="${"nofollow"}">source code</a> to see how that works.</p>
+<p>There obviously are a lot of steps here that I glossed over. The <code>worker</code> function mentioned above for example. I suggest you take a look at the content in the <a href="${"https://github.com/ahopkins/personal-site/tree/main/code/background-job-worker"}" rel="${"nofollow"}">source code</a> to see how that works.</p>
 <p>Our goal here was to examine how to use the new worker manager feature in Sanic to coordinate the sharing of data from worker processes to a custom background process. Obviously, a secondary hope was to show how you could build out a robust platform to handle your own background processing needs entirely within Sanic.</p>
 <p>If I were to try to make this production ready, the things you would want to focus upon are:</p>
 <ul><li>ensuring a more robust data store</li>

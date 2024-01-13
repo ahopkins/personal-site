@@ -1,0 +1,91 @@
+@import "@fontsource/rubik/300.css";
+@import "@fontsource/rubik/400.css";
+@import "@fontsource/rubik/700.css";
+@import "colors.scss";
+
+html,
+body {
+    color: $light;
+    background-color: $dark;
+}
+
+body {
+    margin: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+main {
+    background-color: $less-dark;
+}
+
+a {
+    color: $sanic;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: $sanic;
+    }
+}
+
+label {
+    display: block;
+}
+
+strong {
+    color: $whitish;
+}
+
+.content {
+
+    h1,
+    h2,
+    h3 {
+        color: $light;
+    }
+}
+
+h1.title {
+    color: $whitish;
+}
+
+// input,
+// button,
+// select,
+// textarea {
+//     font-family: inherit;
+//     font-size: inherit;
+//     -webkit-padding: 0.4em 0;
+//     padding: 0.4em;
+//     margin: 0 0 0.5em 0;
+//     box-sizing: border-box;
+//     border: 1px solid #ccc;
+//     border-radius: 2px;
+// }
+
+// input:disabled {
+//     color: #ccc;
+// }
+
+// button {
+//     color: #333;
+//     background-color: #f4f4f4;
+//     outline: none;
+// }
+
+// button:disabled {
+//     color: #999;
+// }
+
+// button:not(:disabled):active {
+//     background-color: #ddd;
+// }
+
+// button:focus {
+//     border-color: #666;
+// }

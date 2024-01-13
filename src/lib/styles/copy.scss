@@ -1,0 +1,23 @@
+@import "./colors.scss";
+
+.pre-wrapper {
+    position: relative;
+}
+
+.pre-wrapper pre {
+    padding-top: 25px;
+}
+
+.pre-wrapper .copy-snippet {
+    border-radius: 0 0.3rem 0 0.3rem;
+    min-width: 55px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.42rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: $less-light;
+    border: 0;
+}

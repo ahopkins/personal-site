@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as each, f as add_attribute, e as escape, h as null_to_empty, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, a as each, i as add_attribute, e as escape, n as null_to_empty, v as validate_component } from "../../chunks/index.js";
 import { F as Footer } from "../../chunks/Footer.js";
 import { T as Time } from "../../chunks/Time.js";
 const Hero_svelte_svelte_type_style_lang = "";
@@ -25,28 +25,28 @@ const Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   ];
   $$result.css.add(css$6);
-  return `<section class="${"hero is-black is-fullheight"}"><div class="${"hero-body"}"><div class="${""}"><h1 class="${"title is-size-1"}">Adam Hopkins</h1>
-            <p class="${"subtitle"}"><i class="${"devicon-python-plain colored"}"></i> Python developer.
-                <img src="${"/images/osi.png"}" style="${"height: 20px;"}" alt="${"Open Source"}">
+  return `<section class="hero is-black is-fullheight"><div class="hero-body"><div class=""><h1 class="title is-size-1">Adam Hopkins</h1>
+            <p class="subtitle"><i class="devicon-python-plain colored"></i> Python developer.
+                <img src="/images/osi.png" style="height: 20px;" alt="Open Source">
                 OSS contributor.
-                <img src="${"/images/sanic-framework-logo-circle-32x32.png"}" style="${"height: 20px;"}" alt="${"Sanic"}">
+                <img src="/images/sanic-framework-logo-circle-32x32.png" style="height: 20px;" alt="Sanic">
                 Sanic Maintainer. <br>
                 Husband. Father. Son. Brother. <br>
                 A proud and happy man.
             </p>
-            <div class="${"social"}">${each(social, (item) => {
-    return `<a${add_attribute("href", item.url, 0)} target="${"_blank"}"><i class="${escape(null_to_empty(item.icon), true) + " svelte-foloil"}"></i>
+            <div class="social">${each(social, (item) => {
+    return `<a${add_attribute("href", item.url, 0)} target="_blank"><i class="${escape(null_to_empty(item.icon), true) + " svelte-foloil"}"></i>
                         ${escape(item.text)}
                     </a>`;
   })}</div></div>
-        <div class="${"adam-avatar svelte-foloil"}"></div></div>
+        <div class="adam-avatar svelte-foloil"></div></div>
 </section>`;
 });
 const Section = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { title } = $$props;
   if ($$props.title === void 0 && $$bindings.title && title !== void 0)
     $$bindings.title(title);
-  return `<section class="${"section is-medium"}"><h2 class="${"title has-text-white-bis"}">What I&#39;ve ${escape(title)}</h2>
+  return `<section class="section is-medium"><h2 class="title has-text-white-bis">What I&#39;ve ${escape(title)}</h2>
     ${slots.default ? slots.default({}) : ``}</section>`;
 });
 const Written = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -55,11 +55,11 @@ const Written = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.articles(articles);
   return `${validate_component(Section, "Section").$$render($$result, { title: "Written" }, {}, {
     default: () => {
-      return `<div class="${"subtitle"}">Some blog articles you can find on this site</div>
-    <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(articles, (article) => {
-        return `<div class="${"tile is-child is-12 box article-list"}"><a${add_attribute("href", `/${article.slug}`, 0)} class="${"content"}"><h5 class="${"is-size-4"}">${escape(article.title)}</h5>
+      return `<div class="subtitle">Some blog articles you can find on this site</div>
+    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(articles, (article) => {
+        return `<div class="tile is-child is-12 box article-list"><a${add_attribute("href", `/${article.slug}`, 0)} class="content"><h5 class="is-size-4">${escape(article.title)}</h5>
                         <em>${escape(article.description)}</em>
-                        <div class="${"article-info"}"><div class="${"date"}"><i class="${"las la-calendar"}"></i>
+                        <div class="article-info"><div class="date"><i class="las la-calendar"></i>
                                 ${validate_component(Time, "Time").$$render(
           $$result,
           {
@@ -71,9 +71,9 @@ const Written = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           {},
           {}
         )}</div>
-                            <div class="${"tags"}"><i class="${"las la-tags"}"></i>
+                            <div class="tags"><i class="las la-tags"></i>
                                 ${each(article.tag, (tag) => {
-          return `<span class="${"tag is-dark"}">${escape(tag)}</span>`;
+          return `<span class="tag is-dark">${escape(tag)}</span>`;
         })}</div>
                         </div></a>
                 </div>`;
@@ -91,7 +91,7 @@ const RepoCard = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   if ($$props.slug === void 0 && $$bindings.slug && slug !== void 0)
     $$bindings.slug(slug);
   $$result.css.add(css$5);
-  return `<a${add_attribute("href", `https://github.com/${slug}`, 0)} class="${"content repo-card svelte-eh4fom"}" target="${"_blank"}">${``}
+  return `<a${add_attribute("href", `https://github.com/${slug}`, 0)} class="content repo-card svelte-eh4fom" target="_blank">${``}
 </a>`;
 });
 const Built_svelte_svelte_type_style_lang = "";
@@ -111,9 +111,9 @@ const Built = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$4);
   return `${validate_component(Section, "Section").$$render($$result, { title: "Built" }, {}, {
     default: () => {
-      return `<div class="${"subtitle"}">Some open source projects I maintain</div>
-    <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(repos, (slug) => {
-        return `<div class="${"tile is-child is-6 box svelte-1ocv4w7"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
+      return `<div class="subtitle">Some open source projects I maintain</div>
+    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(repos, (slug) => {
+        return `<div class="tile is-child is-6 box svelte-1ocv4w7">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
                 </div>`;
       })}</div></div>`;
     }
@@ -129,17 +129,22 @@ const Said = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     "ahopkins/europython2020-overcoming-access-control",
     "ahopkins/pywebconf2021-making-sanic-even-faster",
     "ahopkins/pyconil2021-liberate-your-api",
-    "ahopkins/pygeekle2022-mayim-byoq"
+    "ahopkins/pygeekle2022-mayim-byoq",
+    "ahopkins/pyconil-2023"
   ];
   $$result.css.add(css$3);
   return `${validate_component(Section, "Section").$$render($$result, { title: "Said" }, {}, {
     default: () => {
-      return `<div class="${"subtitle"}">Some presentations I&#39;ve given at tech conferences
+      return `<div class="subtitle">Some presentations I&#39;ve given at tech conferences
     </div>
-    <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(repos, (slug) => {
-        return `<div class="${"tile is-child is-6 box svelte-mbc480"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
+    
+    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(repos, (slug) => {
+        return `<div class="tile is-child is-6 box svelte-mbc480">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
                 </div>`;
-      })}</div></div>`;
+      })}</div></div>
+    
+    <div><h3 class="is-size-3">Closing Keynote PyCon IL 2023</h3>
+	<iframe width="816" height="459" src="https://www.youtube.com/embed/zDGwC2shsgs?si=LgjU1DyPbyeTR0Tc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
     }
   })}`;
 });
@@ -151,7 +156,7 @@ const css$2 = {
 const Done = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const work = [
     {
-      title: "Director of Software Engineering",
+      title: "Vice President of Software Engineering",
       company: "PacketFabric",
       current: true
     },
@@ -170,13 +175,22 @@ const Done = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       company: "Donovan | Hatem"
     }
   ];
+  const classes = (full = false) => {
+    const classes2 = ["tile", "is-child", "box"];
+    if (full) {
+      classes2.push("is-12");
+    } else {
+      classes2.push("is-6");
+    }
+    return classes2.join(" ");
+  };
   $$result.css.add(css$2);
   return `${validate_component(Section, "Section").$$render($$result, { title: "Done" }, {}, {
     default: () => {
-      return `<div class="${"subtitle"}">Some roles I&#39;ve had in the past</div>
-    <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(work, (position) => {
-        return `<div class="${"tile is-child is-6 box svelte-ckjdv8"}"><div class="${"content svelte-ckjdv8"}">${position.current ? `<div class="${"current svelte-ckjdv8"}">\u{1F31F}</div>` : ``}
-                        <strong class="${"svelte-ckjdv8"}">${escape(position.title)}</strong>
+      return `<div class="subtitle">Some roles I&#39;ve had in the past</div>
+    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(work, (position) => {
+        return `<div class="${escape(null_to_empty(classes(position.current)), true) + " svelte-ckjdv8"}"><div class="content svelte-ckjdv8">${position.current ? `<div class="current svelte-ckjdv8">Current 🌟</div>` : ``}
+                        <strong class="svelte-ckjdv8">${escape(position.title)}</strong>
                         ${escape(position.company)}</div>
                 </div>`;
       })}</div></div>`;
@@ -193,12 +207,12 @@ const Content = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.articles === void 0 && $$bindings.articles && articles !== void 0)
     $$bindings.articles(articles);
   $$result.css.add(css$1);
-  return `<div class="${"has-background-black-ter has-text-white-ter"}">${validate_component(Written, "Written").$$render($$result, { articles }, {}, {})}
-    <div class="${"is-divider svelte-bgtuwg"}" data-content="${"\xA7"}"></div>
+  return `<div class="has-background-black-ter has-text-white-ter">${validate_component(Written, "Written").$$render($$result, { articles }, {}, {})}
+    <div class="is-divider svelte-bgtuwg" data-content="§"></div>
     ${validate_component(Built, "Built").$$render($$result, {}, {}, {})}
-    <div class="${"is-divider svelte-bgtuwg"}" data-content="${"\xA7"}"></div>
+    <div class="is-divider svelte-bgtuwg" data-content="§"></div>
     ${validate_component(Said, "Said").$$render($$result, {}, {}, {})}
-    <div class="${"is-divider svelte-bgtuwg"}" data-content="${"\xA7"}"></div>
+    <div class="is-divider svelte-bgtuwg" data-content="§"></div>
     ${validate_component(Done, "Done").$$render($$result, {}, {}, {})}
 </div>`;
 });
@@ -209,16 +223,16 @@ const css = {
 };
 const Book = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<section class="${"section svelte-xfle3w"}"><div class="${"containter"}"><div class="${"content is-size-2 svelte-xfle3w"}">My book
-            <a href="${"https://sanicbook.com"}" class="${"svelte-xfle3w"}">Python Web Development with Sanic
+  return `<section class="section svelte-xfle3w"><div class="containter"><div class="content is-size-2 svelte-xfle3w">My book
+            <a href="https://sanicbook.com" class="svelte-xfle3w">Python Web Development with Sanic
             </a>
             now available
         </div></div>
 </section>`;
 });
 const Home = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Adam</span><span class="token punctuation">:</span>
-    work <span class="token operator">=</span> PacketFabric<span class="token punctuation">(</span><span class="token string">"Director of Software Engineering"</span><span class="token punctuation">)</span>
+  return `<pre class="language-python"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Adam</span><span class="token punctuation">:</span>
+    work <span class="token operator">=</span> PacketFabric<span class="token punctuation">(</span><span class="token string">"Vice President of Software Engineering"</span><span class="token punctuation">)</span>
     oss <span class="token operator">=</span> Sanic<span class="token punctuation">(</span><span class="token string">"Core Maintainer"</span><span class="token punctuation">)</span>
     home <span class="token operator">=</span> Israel<span class="token punctuation">(</span><span class="token string">"Negev"</span><span class="token punctuation">)</span>
 
@@ -236,7 +250,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.data(data);
   return `<main>${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
 	${validate_component(Book, "Book").$$render($$result, {}, {}, {})}
-	<div class="${"container is-max-desktop mb-8"}"><div class="${"mb-8"}">${validate_component(Home, "Home").$$render($$result, {}, {}, {})}</div>
+	<div class="container is-max-desktop mb-8"><div class="mb-8">${validate_component(Home, "Home").$$render($$result, {}, {}, {})}</div>
 		${validate_component(Content, "Content").$$render($$result, { articles: data.articles }, {}, {})}</div>
 	${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</main>`;
 });

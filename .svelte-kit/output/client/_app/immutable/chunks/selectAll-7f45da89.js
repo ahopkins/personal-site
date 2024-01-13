@@ -1,0 +1,1 @@
+import{S as t,A as n,B as o}from"./background-job-worker-26a9bcb1.js";function a(e){return typeof e=="string"?new t([document.querySelectorAll(e)],[document.documentElement]):new t([o(e)],n)}export{a as s};

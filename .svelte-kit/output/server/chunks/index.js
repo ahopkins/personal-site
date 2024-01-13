@@ -46,8 +46,7 @@ function setContext(key, context) {
 function getContext(key) {
   return get_current_component().$$.context.get(key);
 }
-Promise.resolve();
-const boolean_attributes = /* @__PURE__ */ new Set([
+const _boolean_attributes = [
   "allowfullscreen",
   "allowpaymentrequest",
   "async",
@@ -60,6 +59,7 @@ const boolean_attributes = /* @__PURE__ */ new Set([
   "disabled",
   "formnovalidate",
   "hidden",
+  "inert",
   "ismap",
   "loop",
   "multiple",
@@ -72,7 +72,8 @@ const boolean_attributes = /* @__PURE__ */ new Set([
   "required",
   "reversed",
   "selected"
-]);
+];
+const boolean_attributes = /* @__PURE__ */ new Set([..._boolean_attributes]);
 const invalid_attribute_name_character = /[\s'">/=\u{FDD0}-\u{FDEF}\u{FFFE}\u{FFFF}\u{1FFFE}\u{1FFFF}\u{2FFFE}\u{2FFFF}\u{3FFFE}\u{3FFFF}\u{4FFFE}\u{4FFFF}\u{5FFFE}\u{5FFFF}\u{6FFFE}\u{6FFFF}\u{7FFFE}\u{7FFFF}\u{8FFFE}\u{8FFFF}\u{9FFFE}\u{9FFFF}\u{AFFFE}\u{AFFFF}\u{BFFFE}\u{BFFFF}\u{CFFFE}\u{CFFFF}\u{DFFFE}\u{DFFFF}\u{EFFFE}\u{EFFFF}\u{FFFFE}\u{FFFFF}\u{10FFFE}\u{10FFFF}]/u;
 function spread(args, attrs_to_add) {
   const attributes = Object.assign({}, ...args);
@@ -171,7 +172,7 @@ function validate_component(component, name) {
   if (!component || !component.$$render) {
     if (name === "svelte:component")
       name += " this={...}";
-    throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules`);
+    throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules. Otherwise you may need to fix a <${name}>.`);
   }
   return component;
 }
@@ -182,6 +183,7 @@ function create_ssr_component(fn) {
     const $$ = {
       on_destroy,
       context: new Map(context || (parent_component ? parent_component.$$.context : [])),
+      // these will be immediately discarded
       on_mount: [],
       before_update: [],
       after_update: [],
@@ -203,6 +205,7 @@ function create_ssr_component(fn) {
         css: {
           code: Array.from(result.css).map((css) => css.code).join("\n"),
           map: null
+          // TODO
         },
         head: result.title + result.head
       };
@@ -217,23 +220,23 @@ function add_attribute(name, value, boolean) {
   return ` ${name}${assignment}`;
 }
 function style_object_to_string(style_object) {
-  return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
+  return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${escape_attribute_value(style_object[key])};`).join(" ");
 }
 export {
-  safe_not_equal as a,
-  subscribe as b,
+  each as a,
+  compute_rest_props as b,
   create_ssr_component as c,
-  each as d,
+  spread as d,
   escape as e,
-  add_attribute as f,
+  escape_object as f,
   getContext as g,
-  null_to_empty as h,
-  compute_rest_props as i,
-  spread as j,
-  escape_object as k,
-  escape_attribute_value as l,
+  escape_attribute_value as h,
+  add_attribute as i,
+  setContext as j,
+  noop as k,
+  safe_not_equal as l,
   missing_component as m,
-  noop as n,
-  setContext as s,
+  null_to_empty as n,
+  subscribe as s,
   validate_component as v
 };

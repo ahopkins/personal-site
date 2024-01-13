@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, v as validate_component, d as each, m as missing_component } from "../../../chunks/index.js";
+import { c as create_ssr_component, e as escape, v as validate_component, a as each, m as missing_component } from "../../../chunks/index.js";
 import "reading-time-estimator";
 import { T as Time } from "../../../chunks/Time.js";
 const Giscus = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -55,10 +55,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let timeToRead = "";
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  return `<article><div class="${"article-container container is-max-desktop"}"><h1 class="${"title is-size-1"}">${escape(meta.title)}</h1>
-        <div class="${"subtitle"}">${escape(meta.description)}</div>
+  return `<article><div class="article-container container is-max-desktop"><h1 class="title is-size-1">${escape(meta.title)}</h1>
+        <div class="subtitle">${escape(meta.description)}</div>
 
-        <div class="${"article-info"}"><div class="${"date"}"><i class="${"las la-calendar"}"></i>
+        <div class="article-info"><div class="date"><i class="las la-calendar"></i>
                 ${validate_component(Time, "Time").$$render(
     $$result,
     {
@@ -70,13 +70,13 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</div>
-            <div class="${"tags"}"><i class="${"las la-tags"}"></i>
+            <div class="tags"><i class="las la-tags"></i>
                 ${each(meta.tag, (tag) => {
-    return `<span class="${"tag is-dark"}">${escape(tag)}</span>`;
+    return `<span class="tag is-dark">${escape(tag)}</span>`;
   })}</div>
-            <div class="${"read-time"}"><i class="${"las la-hourglass"}"></i>
+            <div class="read-time"><i class="las la-hourglass"></i>
                 ${escape(timeToRead)}</div></div>
-        <div class="${"content"}">${validate_component(body || missing_component, "svelte:component").$$render($$result, {}, {}, {})}</div>
+        <div class="content">${validate_component(body || missing_component, "svelte:component").$$render($$result, {}, {}, {})}</div>
 
         ${validate_component(Giscus, "Giscus").$$render(
     $$result,
@@ -97,9 +97,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {}
   )}</div></article>
 
-${$$result.head += `${$$result.title = `<title>
+${$$result.head += `<!-- HEAD_svelte-1cy2aey_START -->${$$result.title = `<title>
         ${escape(meta.title)}
-    </title>`, ""}`, ""}`;
+    </title>`, ""}<!-- HEAD_svelte-1cy2aey_END -->`, ""}`;
 });
 export {
   Page as default

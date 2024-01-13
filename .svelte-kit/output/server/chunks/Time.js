@@ -1,11 +1,11 @@
-import { c as create_ssr_component, i as compute_rest_props, j as spread, k as escape_object, l as escape_attribute_value, e as escape } from "./index.js";
+import { c as create_ssr_component, b as compute_rest_props, d as spread, f as escape_object, h as escape_attribute_value, e as escape } from "./index.js";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime.js";
 dayjs.extend(relativeTime);
 const Time = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let title;
   let $$restProps = compute_rest_props($$props, ["timestamp", "format", "relative", "live", "formatted"]);
-  let { timestamp = new Date().toISOString() } = $$props;
+  let { timestamp = (/* @__PURE__ */ new Date()).toISOString() } = $$props;
   let { format = "MMM DD, YYYY" } = $$props;
   let { relative = false } = $$props;
   let { live = false } = $$props;

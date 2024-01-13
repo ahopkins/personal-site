@@ -7,24 +7,24 @@ const css = {
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<nav class="${"navbar svelte-16903xz"}" aria-label="${"main navigation"}"><div class="${"navbar-brand"}"><a class="${"navbar-item svelte-16903xz"}" href="${"/"}"><img src="${"/images/adam.svg"}" alt="${"Adam Hopkins"}"></a>
+  return `<nav class="navbar svelte-16903xz" aria-label="main navigation"><div class="navbar-brand"><a class="navbar-item svelte-16903xz" href="/"><img src="/images/adam.svg" alt="Adam Hopkins"></a>
 
-        <a href="${"/"}" role="${"button"}" class="${"navbar-burger"}" aria-label="${"menu"}" aria-expanded="${"false"}" data-target="${"navbarBasicExample"}"><span aria-hidden="${"true"}"></span>
-            <span aria-hidden="${"true"}"></span>
-            <span aria-hidden="${"true"}"></span></a></div>
+        <a href="/" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span></a></div>
 
-    <div id="${"article-navbar"}" class="${["navbar-menu is-dark svelte-16903xz", ""].join(" ").trim()}"><div class="${"navbar-start"}"><a class="${"navbar-item svelte-16903xz"}" href="${"/"}"><i class="${"las la-home"}"></i>
+    <div id="article-navbar" class="${["navbar-menu is-dark svelte-16903xz", ""].join(" ").trim()}"><div class="navbar-start"><a class="navbar-item svelte-16903xz" href="/"><i class="las la-home"></i>
                 Home
             </a>
 
-            <a class="${"navbar-item svelte-16903xz"}" href="${"https://sanicbook.com"}" target="${"_blank"}"><i class="${"las la-book-open"}"></i>
+            <a class="navbar-item svelte-16903xz" href="https://sanicbook.com" target="_blank"><i class="las la-book-open"></i>
                 Sanic Book
             </a>
 
-            <div class="${"navbar-item has-dropdown is-hoverable svelte-16903xz"}"><span class="${"navbar-link svelte-16903xz"}" id="${"article-menu-title"}"></span>
-                <div class="${"navbar-dropdown svelte-16903xz"}" id="${"article-menu-content"}"></div></div></div>
+            <div class="navbar-item has-dropdown is-hoverable svelte-16903xz"><span class="navbar-link svelte-16903xz" id="article-menu-title"></span>
+                <div class="navbar-dropdown svelte-16903xz" id="article-menu-content"></div></div></div>
 
-        <div class="${"navbar-end"}"><a class="${"navbar-item svelte-16903xz"}" href="${"https://github.com/ahopkins/personal-site"}"><i class="${"lab la-github"}"></i></a></div></div></nav>
+        <div class="navbar-end"><a class="navbar-item svelte-16903xz" href="https://github.com/ahopkins/personal-site"><i class="lab la-github"></i></a></div></div></nav>
 <main>${slots.default ? slots.default({}) : ``}</main>
 
 

@@ -11,19 +11,17 @@ const config = {
             pages: "docs",
             assets: "docs"
         }),
+        paths: {
+            base: "",
+        },
+        trailingSlash: "always",
+        prerender: {
+            crawl: true,
+            entries: ["*", "/background-job-worker"],
+        },
     },
 
-    paths: {
-        // change below to your repo name
-        base: false ? "" : "/personal-site",
-    },
-
-    trailingSlash: "always",
     preprocess: [mdsvex(mdsvexConfig)],
-    prerender: {
-        crawl: true,
-        entries: ["/"],
-    },
 }
 
 export default config

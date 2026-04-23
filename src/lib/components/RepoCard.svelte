@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import { dataset_dev } from "svelte/internal";
     export let slug;
 
     const colors = {
@@ -9,8 +8,15 @@
     };
     let loading = null;
     const load = async () => {
-        const response = await fetch(`https://api.github.com/repos/${slug}`);
-        return await response.json();
+        try {
+            const response = await fetch(`https://api.github.com/repos/${slug}`);
+            if (!response.ok) return null;
+            const data = await response.json();
+            if (!data || !data.full_name) return null;
+            return data;
+        } catch {
+            return null;
+        }
     };
     onMount(async () => {
         loading = load();
@@ -24,34 +30,46 @@
 >
     {#if loading}
         {#await loading}
-            <p>loading ...</p>
+            <div class="repo">
+                <div class="repo-title">
+                    <i class="lab la-github" />
+                    {slug}
+                </div>
+            </div>
         {:then data}
             <div class="repo">
                 <div class="repo-title">
                     <i class="lab la-github" />
-                    {data.full_name}
+                    {data?.full_name ?? slug}
                 </div>
-                {#if data.description}
+                {#if data?.description}
                     <div class="repo-description">{data.description}</div>
                 {/if}
-                <div class="repo-info">
-                    {#if data.language && colors[data.language]}
-                        <span
-                            class="language"
-                            style={`background-color: ${colors[data.language]}`}
-                        />
-                        {data.language}
-                    {/if}
+                {#if data}
+                    <div class="repo-info">
+                        {#if data.language && colors[data.language]}
+                            <span
+                                class="language"
+                                style={`background-color: ${colors[data.language]}`}
+                            />
+                            {data.language}
+                        {/if}
 
-                    <i class="las la-star" />
-                    {data.stargazers_count}
+                        <i class="las la-star" />
+                        {data.stargazers_count}
 
-                    <i class="las la-code-branch" />
-                    {data.forks_count}
-                </div>
+                        <i class="las la-code-branch" />
+                        {data.forks_count}
+                    </div>
+                {/if}
             </div>
         {:catch error}
-            <p>An error occurred!</p>
+            <div class="repo">
+                <div class="repo-title">
+                    <i class="lab la-github" />
+                    {slug}
+                </div>
+            </div>
         {/await}
     {/if}
 </a>

@@ -1,17 +1,16 @@
-import { c as create_ssr_component, a as each, i as add_attribute, e as escape, n as null_to_empty, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, d as each, f as add_attribute, e as escape, h as null_to_empty, v as validate_component } from "../../chunks/index.js";
 import { F as Footer } from "../../chunks/Footer.js";
-import { T as Time } from "../../chunks/Time.js";
 const Hero_svelte_svelte_type_style_lang = "";
-const css$6 = {
-  code: ".adam-avatar.svelte-foloil{position:absolute;right:0;height:100vh;width:60vw;-webkit-filter:invert(100%);filter:invert(100%);opacity:0.2;background-position:right;background-image:url(/images/adam-unified.svg);background-size:cover;background-repeat:no-repeat}@media(max-width: 1120px){.adam-avatar.svelte-foloil{background-position:bottom right}}@media(max-width: 1400px){.adam-avatar.svelte-foloil{background-size:contain}}",
+const css$7 = {
+  code: ".social.svelte-1cc7oe9 .glyph.svelte-1cc7oe9{display:inline-block;font-weight:700;font-size:1.05em;margin-right:0.15em;vertical-align:-0.05em}.adam-avatar.svelte-1cc7oe9.svelte-1cc7oe9{position:absolute;right:0;height:100vh;width:60vw;-webkit-filter:invert(100%);filter:invert(100%);opacity:0.2;background-position:right;background-image:url(/images/adam-unified.svg);background-size:cover;background-repeat:no-repeat}@media(max-width: 1120px){.adam-avatar.svelte-1cc7oe9.svelte-1cc7oe9{background-position:bottom right}}@media(max-width: 1400px){.adam-avatar.svelte-1cc7oe9.svelte-1cc7oe9{background-size:contain}}",
   map: null
 };
 const Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const social = [
     {
-      url: "https://www.twitter.com/admhpkns",
+      url: "https://x.com/admhpkns",
       text: "@admhpkns",
-      icon: "devicon-twitter-original"
+      glyph: "\u{1D54F}"
     },
     {
       url: "https://github.com/ahopkins",
@@ -24,58 +23,98 @@ const Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       icon: "devicon-linkedin-plain"
     }
   ];
-  $$result.css.add(css$6);
-  return `<section class="hero is-black is-fullheight"><div class="hero-body"><div class=""><h1 class="title is-size-1">Adam Hopkins</h1>
-            <p class="subtitle"><i class="devicon-python-plain colored"></i> Python developer.
-                <img src="/images/osi.png" style="height: 20px;" alt="Open Source">
+  $$result.css.add(css$7);
+  return `<section class="${"hero is-black is-fullheight"}"><div class="${"hero-body"}"><div class="${""}"><h1 class="${"title is-size-1"}">Adam Hopkins</h1>
+            <p class="${"subtitle"}">Founder &amp; CTO. AI-native platforms. <br>
+                <i class="${"devicon-python-plain colored"}"></i> Python developer.
+                <img src="${"/images/osi.png"}" style="${"height: 20px;"}" alt="${"Open Source"}">
                 OSS contributor.
-                <img src="/images/sanic-framework-logo-circle-32x32.png" style="height: 20px;" alt="Sanic">
-                Sanic Maintainer. <br>
+                <img src="${"/images/sanic-framework-logo-circle-32x32.png"}" style="${"height: 20px;"}" alt="${"Sanic"}">
+                Sanic Core Maintainer. <br>
                 Husband. Father. Son. Brother. <br>
                 A proud and happy man.
             </p>
-            <div class="social">${each(social, (item) => {
-    return `<a${add_attribute("href", item.url, 0)} target="_blank"><i class="${escape(null_to_empty(item.icon), true) + " svelte-foloil"}"></i>
+            <div class="${"social svelte-1cc7oe9"}">${each(social, (item) => {
+    return `<a${add_attribute("href", item.url, 0)} target="${"_blank"}">${item.glyph ? `<span class="${"glyph svelte-1cc7oe9"}">${escape(item.glyph)}</span>` : `<i class="${escape(null_to_empty(item.icon), true) + " svelte-1cc7oe9"}"></i>`}
                         ${escape(item.text)}
                     </a>`;
   })}</div></div>
-        <div class="adam-avatar svelte-foloil"></div></div>
+        <div class="${"adam-avatar svelte-1cc7oe9"}"></div></div>
 </section>`;
 });
 const Section = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { title } = $$props;
   if ($$props.title === void 0 && $$bindings.title && title !== void 0)
     $$bindings.title(title);
-  return `<section class="section is-medium"><h2 class="title has-text-white-bis">What I&#39;ve ${escape(title)}</h2>
+  return `<section class="${"section is-medium"}"><h2 class="${"title has-text-white-bis"}">What I&#39;ve ${escape(title)}</h2>
     ${slots.default ? slots.default({}) : ``}</section>`;
 });
-const Written = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { articles } = $$props;
-  if ($$props.articles === void 0 && $$bindings.articles && articles !== void 0)
-    $$bindings.articles(articles);
-  return `${validate_component(Section, "Section").$$render($$result, { title: "Written" }, {}, {
+const Done_svelte_svelte_type_style_lang = "";
+const css$6 = {
+  code: ".content.svelte-1kvm4yt .current.svelte-1kvm4yt{float:right}.box.svelte-1kvm4yt.svelte-1kvm4yt{background:transparent;box-shadow:none}.content.svelte-1kvm4yt.svelte-1kvm4yt{display:block;box-shadow:none;background:#111111;border-radius:6px;padding:1.25em;line-height:1.5;color:var(--svc-text-primary, #586069)}.content.svelte-1kvm4yt strong.svelte-1kvm4yt{display:block}.content.svelte-1kvm4yt .tagline.svelte-1kvm4yt{font-size:0.95rem;color:#a0a0a0;margin-top:0.35rem;font-style:italic}.content.svelte-1kvm4yt .years.svelte-1kvm4yt{font-size:0.8rem;color:#666;margin-top:0.4rem;letter-spacing:0.03em}",
+  map: null
+};
+const Done = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const work = [
+    {
+      title: "Co-Founder & CTO",
+      company: "HyperFi",
+      years: "2025\u2013present",
+      tagline: "AI-native infrastructure orchestration",
+      current: true
+    },
+    {
+      title: "Fractional CTO",
+      company: "PacketFabric",
+      years: "2025\u2013present",
+      current: true
+    },
+    {
+      title: "Head of Data Modernization",
+      company: "Lumen Technologies",
+      years: "2024\u20132025"
+    },
+    {
+      title: "VP of Software Engineering",
+      company: "PacketFabric",
+      years: "2020\u20132024"
+    },
+    {
+      title: "Principal Software Engineer",
+      company: "Matrix Retail",
+      years: "2017\u20132020"
+    },
+    {
+      title: "Co-Founder & CTO",
+      company: "Optymizer Solutions",
+      years: "2015\u20132017"
+    },
+    {
+      title: "Freelance Software Developer",
+      company: "Self-employed",
+      years: "1999\u20132015"
+    },
+    {
+      title: "Attorney / Paralegal",
+      company: "Various firms",
+      years: "2006\u20132014"
+    }
+  ];
+  const classes = (current = false) => {
+    const base = ["tile", "is-child", "box"];
+    base.push(current ? "is-12" : "is-6");
+    return base.join(" ");
+  };
+  $$result.css.add(css$6);
+  return `${validate_component(Section, "Section").$$render($$result, { title: "Done" }, {}, {
     default: () => {
-      return `<div class="subtitle">Some blog articles you can find on this site</div>
-    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(articles, (article) => {
-        return `<div class="tile is-child is-12 box article-list"><a${add_attribute("href", `/${article.slug}`, 0)} class="content"><h5 class="is-size-4">${escape(article.title)}</h5>
-                        <em>${escape(article.description)}</em>
-                        <div class="article-info"><div class="date"><i class="las la-calendar"></i>
-                                ${validate_component(Time, "Time").$$render(
-          $$result,
-          {
-            timestamp: article.date,
-            live: true,
-            relative: true,
-            format: "YYYY-MM-DD"
-          },
-          {},
-          {}
-        )}</div>
-                            <div class="tags"><i class="las la-tags"></i>
-                                ${each(article.tag, (tag) => {
-          return `<span class="tag is-dark">${escape(tag)}</span>`;
-        })}</div>
-                        </div></a>
+      return `<div class="${"subtitle"}">Where I am now, and where I&#39;ve been</div>
+    <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(work, (position) => {
+        return `<div class="${escape(null_to_empty(classes(position.current)), true) + " svelte-1kvm4yt"}"><div class="${"content svelte-1kvm4yt"}">${position.current ? `<div class="${"current svelte-1kvm4yt"}">Current \u{1F31F}</div>` : ``}
+                        <strong class="${"svelte-1kvm4yt"}">${escape(position.title)}</strong>
+                        ${escape(position.company)}
+                        ${position.tagline ? `<div class="${"tagline svelte-1kvm4yt"}">${escape(position.tagline)}</div>` : ``}
+                        <div class="${"years svelte-1kvm4yt"}">${escape(position.years)}</div></div>
                 </div>`;
       })}</div></div>`;
     }
@@ -91,7 +130,7 @@ const RepoCard = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   if ($$props.slug === void 0 && $$bindings.slug && slug !== void 0)
     $$bindings.slug(slug);
   $$result.css.add(css$5);
-  return `<a${add_attribute("href", `https://github.com/${slug}`, 0)} class="content repo-card svelte-eh4fom" target="_blank">${``}
+  return `<a${add_attribute("href", `https://github.com/${slug}`, 0)} class="${"content repo-card svelte-eh4fom"}" target="${"_blank"}">${``}
 </a>`;
 });
 const Built_svelte_svelte_type_style_lang = "";
@@ -111,9 +150,9 @@ const Built = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$4);
   return `${validate_component(Section, "Section").$$render($$result, { title: "Built" }, {}, {
     default: () => {
-      return `<div class="subtitle">Some open source projects I maintain</div>
-    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(repos, (slug) => {
-        return `<div class="tile is-child is-6 box svelte-1ocv4w7">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
+      return `<div class="${"subtitle"}">Open source projects I maintain across the Sanic ecosystem</div>
+    <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(repos, (slug) => {
+        return `<div class="${"tile is-child is-6 box svelte-1ocv4w7"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
                 </div>`;
       })}</div></div>`;
     }
@@ -121,7 +160,7 @@ const Built = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Said_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: ".box.svelte-mbc480{background:transparent;box-shadow:none}",
+  code: ".box.svelte-1fp8qi2.svelte-1fp8qi2{background:transparent;box-shadow:none}.video-embed.svelte-1fp8qi2.svelte-1fp8qi2{position:relative;width:100%;padding-bottom:56.25%;height:0}.video-embed.svelte-1fp8qi2 iframe.svelte-1fp8qi2{position:absolute;inset:0;width:100%;height:100%}",
   map: null
 };
 const Said = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -135,124 +174,72 @@ const Said = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$3);
   return `${validate_component(Section, "Section").$$render($$result, { title: "Said" }, {}, {
     default: () => {
-      return `<div class="subtitle">Some presentations I&#39;ve given at tech conferences
+      return `<div class="${"subtitle"}">Some presentations I&#39;ve given at tech conferences
     </div>
     
-    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(repos, (slug) => {
-        return `<div class="tile is-child is-6 box svelte-mbc480">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
+    <div class="${"tile is-ancestor"}"><div class="${"tile is-parent is-flex-wrap-wrap"}">${each(repos, (slug) => {
+        return `<div class="${"tile is-child is-6 box svelte-1fp8qi2"}">${validate_component(RepoCard, "RepoCard").$$render($$result, { slug }, {}, {})}
                 </div>`;
       })}</div></div>
     
-    <div><h3 class="is-size-3">Closing Keynote PyCon IL 2023</h3>
-	<iframe width="816" height="459" src="https://www.youtube.com/embed/zDGwC2shsgs?si=LgjU1DyPbyeTR0Tc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
-    }
-  })}`;
-});
-const Done_svelte_svelte_type_style_lang = "";
-const css$2 = {
-  code: ".content.svelte-ckjdv8 .current.svelte-ckjdv8{float:right}.box.svelte-ckjdv8.svelte-ckjdv8{background:transparent;box-shadow:none}.content.svelte-ckjdv8.svelte-ckjdv8{display:block;box-shadow:none;background:#111111;border-radius:6px;padding:1.25em;line-height:1.5;color:var(--svc-text-primary, #586069)}.content.svelte-ckjdv8 strong.svelte-ckjdv8{display:block}",
-  map: null
-};
-const Done = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  const work = [
-    {
-      title: "Vice President of Software Engineering",
-      company: "PacketFabric",
-      current: true
-    },
-    {
-      title: "Full Stack, Principal Engineer",
-      company: "Matrix Retail"
-    },
-    { title: "CTO/CLO", company: "Optymizer" },
-    { title: "Principal", company: "AHopLaw" },
-    {
-      title: "Associate Attorney",
-      company: "Looney & Grossman"
-    },
-    {
-      title: "Associate Attorney",
-      company: "Donovan | Hatem"
-    }
-  ];
-  const classes = (full = false) => {
-    const classes2 = ["tile", "is-child", "box"];
-    if (full) {
-      classes2.push("is-12");
-    } else {
-      classes2.push("is-6");
-    }
-    return classes2.join(" ");
-  };
-  $$result.css.add(css$2);
-  return `${validate_component(Section, "Section").$$render($$result, { title: "Done" }, {}, {
-    default: () => {
-      return `<div class="subtitle">Some roles I&#39;ve had in the past</div>
-    <div class="tile is-ancestor"><div class="tile is-parent is-flex-wrap-wrap">${each(work, (position) => {
-        return `<div class="${escape(null_to_empty(classes(position.current)), true) + " svelte-ckjdv8"}"><div class="content svelte-ckjdv8">${position.current ? `<div class="current svelte-ckjdv8">Current 🌟</div>` : ``}
-                        <strong class="svelte-ckjdv8">${escape(position.title)}</strong>
-                        ${escape(position.company)}</div>
-                </div>`;
-      })}</div></div>`;
+    <div class="${"video-wrap"}"><h3 class="${"is-size-3"}">Closing Keynote PyCon IL 2023</h3>
+        <div class="${"video-embed svelte-1fp8qi2"}"><iframe src="${"https://www.youtube.com/embed/zDGwC2shsgs?si=LgjU1DyPbyeTR0Tc"}" title="${"YouTube video player"}" frameborder="${"0"}" allow="${"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"}" allowfullscreen class="${"svelte-1fp8qi2"}"></iframe></div></div>`;
     }
   })}`;
 });
 const Content_svelte_svelte_type_style_lang = "";
-const css$1 = {
+const css$2 = {
   code: ".is-divider.svelte-bgtuwg{border-color:#111;max-width:80%;margin:auto}.is-divider[data-content].svelte-bgtuwg::after{background:#242424 !important;color:#444 !important;font-size:3rem;line-height:3rem;padding:0.5rem 2rem;transform:translateY(-2rem)}",
   map: null
 };
 const Content = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { articles } = $$props;
-  if ($$props.articles === void 0 && $$bindings.articles && articles !== void 0)
-    $$bindings.articles(articles);
-  $$result.css.add(css$1);
-  return `<div class="has-background-black-ter has-text-white-ter">${validate_component(Written, "Written").$$render($$result, { articles }, {}, {})}
-    <div class="is-divider svelte-bgtuwg" data-content="§"></div>
+  $$result.css.add(css$2);
+  return `<div class="${"has-background-black-ter has-text-white-ter"}">${validate_component(Done, "Done").$$render($$result, {}, {}, {})}
+    <div class="${"is-divider svelte-bgtuwg"}" data-content="${"\xA7"}"></div>
     ${validate_component(Built, "Built").$$render($$result, {}, {}, {})}
-    <div class="is-divider svelte-bgtuwg" data-content="§"></div>
+    <div class="${"is-divider svelte-bgtuwg"}" data-content="${"\xA7"}"></div>
     ${validate_component(Said, "Said").$$render($$result, {}, {}, {})}
-    <div class="is-divider svelte-bgtuwg" data-content="§"></div>
-    ${validate_component(Done, "Done").$$render($$result, {}, {}, {})}
 </div>`;
 });
 const Book_svelte_svelte_type_style_lang = "";
-const css = {
-  code: ".section.svelte-xfle3w.svelte-xfle3w{background-color:#ff0d68;color:#000000;position:relative;transform:translateY(-100%)}.section.svelte-xfle3w a.svelte-xfle3w{color:#000000;font-weight:700;text-decoration:underline}.section.svelte-xfle3w a.svelte-xfle3w:hover{color:#111111}@media(max-width: 800px){.section.svelte-xfle3w.svelte-xfle3w{transform:translateY(-100vh);padding:0.25rem !important}.is-size-2.svelte-xfle3w.svelte-xfle3w{font-size:1.25rem !important}}",
+const css$1 = {
+  code: ".book-strip.svelte-m514zv.svelte-m514zv{background-color:#ff0d68;color:#000000;padding:0.75rem 1rem;text-align:center;font-size:1.1rem;font-weight:500}.book-strip.svelte-m514zv p.svelte-m514zv{margin:0}.book-strip.svelte-m514zv a.svelte-m514zv{color:#000000;font-weight:700;text-decoration:underline}.book-strip.svelte-m514zv a.svelte-m514zv:hover{color:#111111}.book-label.svelte-m514zv.svelte-m514zv{display:inline-block;background:#000;color:#ff0d68;padding:0.1rem 0.5rem;margin-right:0.5rem;border-radius:3px;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700}@media(max-width: 600px){.book-strip.svelte-m514zv.svelte-m514zv{font-size:0.95rem;padding:0.6rem 0.75rem}.trailing.svelte-m514zv.svelte-m514zv{display:block;margin-top:0.15rem;font-size:0.85rem}}",
   map: null
 };
 const Book = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css);
-  return `<section class="section svelte-xfle3w"><div class="containter"><div class="content is-size-2 svelte-xfle3w">My book
-            <a href="https://sanicbook.com" class="svelte-xfle3w">Python Web Development with Sanic
-            </a>
-            now available
-        </div></div>
+  $$result.css.add(css$1);
+  return `<section class="${"book-strip svelte-m514zv"}"><div class="${"container"}"><p class="${"svelte-m514zv"}"><span class="${"book-label svelte-m514zv"}">Book</span>
+            <a href="${"https://sanicbook.com"}" class="${"svelte-m514zv"}">Python Web Development with Sanic</a>
+            <span class="${"trailing svelte-m514zv"}">\u2014 available from Packt</span></p></div>
 </section>`;
 });
 const Home = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<pre class="language-python"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Adam</span><span class="token punctuation">:</span>
-    work <span class="token operator">=</span> PacketFabric<span class="token punctuation">(</span><span class="token string">"Vice President of Software Engineering"</span><span class="token punctuation">)</span>
+  return `<pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Adam</span><span class="token punctuation">:</span>
+    work <span class="token operator">=</span> HyperFi<span class="token punctuation">(</span><span class="token string">"CTO &amp; Co-founder"</span><span class="token punctuation">)</span>
     oss <span class="token operator">=</span> Sanic<span class="token punctuation">(</span><span class="token string">"Core Maintainer"</span><span class="token punctuation">)</span>
     home <span class="token operator">=</span> Israel<span class="token punctuation">(</span><span class="token string">"Negev"</span><span class="token punctuation">)</span>
 
-    <span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> inputs<span class="token punctuation">:</span> Union<span class="token punctuation">[</span>Pretzels<span class="token punctuation">,</span> Coffee<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>inputs<span class="token punctuation">:</span> Pretzels <span class="token operator">|</span> Coffee<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
         <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
             <span class="token keyword">await</span> self<span class="token punctuation">.</span>work<span class="token punctuation">.</span>do<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
             <span class="token keyword">await</span> self<span class="token punctuation">.</span>oss<span class="token punctuation">.</span>do<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
-        
+
     <span class="token keyword">def</span> <span class="token function">sleep</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">raise</span> NotImplementedError</code>`}<!-- HTML_TAG_END --></pre>`;
 });
+const _page_svelte_svelte_type_style_lang = "";
+const css = {
+  code: ".main-container.svelte-1eg0cg3{padding-top:3rem}@media(max-width: 600px){.main-container.svelte-1eg0cg3{padding-top:2rem}}",
+  map: null
+};
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { data } = $$props;
-  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
-    $$bindings.data(data);
+  $$result.css.add(css);
   return `<main>${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
 	${validate_component(Book, "Book").$$render($$result, {}, {}, {})}
-	<div class="container is-max-desktop mb-8"><div class="mb-8">${validate_component(Home, "Home").$$render($$result, {}, {}, {})}</div>
-		${validate_component(Content, "Content").$$render($$result, { articles: data.articles }, {}, {})}</div>
-	${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</main>`;
+	<div class="${"container is-max-desktop mb-8 main-container svelte-1eg0cg3"}"><div class="${"mb-8"}">${validate_component(Home, "Home").$$render($$result, {}, {}, {})}</div>
+		${validate_component(Content, "Content").$$render($$result, {}, {}, {})}</div>
+	${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
+</main>`;
 });
 export {
   Page as default

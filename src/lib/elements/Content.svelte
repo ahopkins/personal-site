@@ -1,19 +1,15 @@
 <script>
-    import Written from "./Written.svelte";
+    import Done from "./Done.svelte";
     import Built from "./Built.svelte";
     import Said from "./Said.svelte";
-    import Done from "./Done.svelte";
-    export let articles;
 </script>
 
 <div class="has-background-black-ter has-text-white-ter">
-    <Written {articles} />
+    <Done />
     <div class="is-divider" data-content="§" />
     <Built />
     <div class="is-divider" data-content="§" />
     <Said />
-    <div class="is-divider" data-content="§" />
-    <Done />
 </div>
 
 <style>

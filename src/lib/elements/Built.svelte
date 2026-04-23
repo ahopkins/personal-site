@@ -13,7 +13,7 @@
 </script>
 
 <Section title="Built">
-    <div class="subtitle">Some open source projects I maintain</div>
+    <div class="subtitle">Open source projects I maintain across the Sanic ecosystem</div>
     <div class="tile is-ancestor">
         <div class="tile is-parent is-flex-wrap-wrap">
             {#each repos as slug}

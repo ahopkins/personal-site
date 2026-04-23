@@ -8,5 +8,14 @@
 		"src/routes/[slug]/+page.js",
 		"src/routes/+layout.js",
 		"src/routes/+layout.js"
+	],
+	"": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"[slug]": [
+		"src/routes/[slug]/+page.js",
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
 	]
 }

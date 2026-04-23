@@ -3,30 +3,59 @@
 
     const work = [
         {
-            title: "Vice President of Software Engineering",
-            company: "PacketFabric",
+            title: "Co-Founder & CTO",
+            company: "HyperFi",
+            years: "2025–present",
+            tagline: "AI-native infrastructure orchestration",
             current: true,
         },
-        { title: "Full Stack, Principal Engineer", company: "Matrix Retail" },
-        { title: "CTO/CLO", company: "Optymizer" },
-        { title: "Principal", company: "AHopLaw" },
-        { title: "Associate Attorney", company: "Looney & Grossman" },
-        { title: "Associate Attorney", company: "Donovan | Hatem" },
+        {
+            title: "Fractional CTO",
+            company: "PacketFabric",
+            years: "2025–present",
+            current: true,
+        },
+        {
+            title: "Head of Data Modernization",
+            company: "Lumen Technologies",
+            years: "2024–2025",
+        },
+        {
+            title: "VP of Software Engineering",
+            company: "PacketFabric",
+            years: "2020–2024",
+        },
+        {
+            title: "Principal Software Engineer",
+            company: "Matrix Retail",
+            years: "2017–2020",
+        },
+        {
+            title: "Co-Founder & CTO",
+            company: "Optymizer Solutions",
+            years: "2015–2017",
+        },
+        {
+            title: "Freelance Software Developer",
+            company: "Self-employed",
+            years: "1999–2015",
+        },
+        {
+            title: "Attorney / Paralegal",
+            company: "Various firms",
+            years: "2006–2014",
+        },
     ];
 
-    const classes = (full = false) => {
-		const classes = ["tile", "is-child", "box"];
-		if (full) {
-			classes.push("is-12");
-		} else {
-			classes.push("is-6");
-		}
-		return classes.join(" ");
-	};
+    const classes = (current = false) => {
+        const base = ["tile", "is-child", "box"];
+        base.push(current ? "is-12" : "is-6");
+        return base.join(" ");
+    };
 </script>
 
 <Section title="Done">
-    <div class="subtitle">Some roles I've had in the past</div>
+    <div class="subtitle">Where I am now, and where I've been</div>
     <div class="tile is-ancestor">
         <div class="tile is-parent is-flex-wrap-wrap">
             {#each work as position}
@@ -37,6 +66,10 @@
                         {/if}
                         <strong>{position.title}</strong>
                         {position.company}
+                        {#if position.tagline}
+                            <div class="tagline">{position.tagline}</div>
+                        {/if}
+                        <div class="years">{position.years}</div>
                     </div>
                 </div>
             {/each}
@@ -65,5 +98,17 @@
     }
     .content strong {
         display: block;
+    }
+    .content .tagline {
+        font-size: 0.95rem;
+        color: #a0a0a0;
+        margin-top: 0.35rem;
+        font-style: italic;
+    }
+    .content .years {
+        font-size: 0.8rem;
+        color: #666;
+        margin-top: 0.4rem;
+        letter-spacing: 0.03em;
     }
 </style>

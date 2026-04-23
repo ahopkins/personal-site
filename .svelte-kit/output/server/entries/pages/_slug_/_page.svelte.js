@@ -1,6 +1,39 @@
-import { c as create_ssr_component, e as escape, v as validate_component, a as each, m as missing_component } from "../../../chunks/index.js";
+import { c as create_ssr_component, i as compute_rest_props, j as spread, k as escape_object, l as escape_attribute_value, e as escape, v as validate_component, d as each, m as missing_component } from "../../../chunks/index.js";
 import "reading-time-estimator";
-import { T as Time } from "../../../chunks/Time.js";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime.js";
+dayjs.extend(relativeTime);
+const Time = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let title;
+  let $$restProps = compute_rest_props($$props, ["timestamp", "format", "relative", "live", "formatted"]);
+  let { timestamp = new Date().toISOString() } = $$props;
+  let { format = "MMM DD, YYYY" } = $$props;
+  let { relative = false } = $$props;
+  let { live = false } = $$props;
+  let { formatted = "" } = $$props;
+  if ($$props.timestamp === void 0 && $$bindings.timestamp && timestamp !== void 0)
+    $$bindings.timestamp(timestamp);
+  if ($$props.format === void 0 && $$bindings.format && format !== void 0)
+    $$bindings.format(format);
+  if ($$props.relative === void 0 && $$bindings.relative && relative !== void 0)
+    $$bindings.relative(relative);
+  if ($$props.live === void 0 && $$bindings.live && live !== void 0)
+    $$bindings.live(live);
+  if ($$props.formatted === void 0 && $$bindings.formatted && formatted !== void 0)
+    $$bindings.formatted(formatted);
+  formatted = relative ? dayjs(timestamp).from() : dayjs(timestamp).format(format);
+  title = relative ? dayjs(timestamp).format(format) : void 0;
+  return `<time${spread(
+    [
+      escape_object($$restProps),
+      { title: escape_attribute_value(title) },
+      {
+        datetime: escape_attribute_value(timestamp)
+      }
+    ],
+    {}
+  )}>${escape(formatted)}</time>`;
+});
 const Giscus = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { id = void 0 } = $$props;
   let { host = "https://giscus.app" } = $$props;
@@ -55,10 +88,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let timeToRead = "";
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  return `<article><div class="article-container container is-max-desktop"><h1 class="title is-size-1">${escape(meta.title)}</h1>
-        <div class="subtitle">${escape(meta.description)}</div>
+  return `<article><div class="${"article-container container is-max-desktop"}"><h1 class="${"title is-size-1"}">${escape(meta.title)}</h1>
+        <div class="${"subtitle"}">${escape(meta.description)}</div>
 
-        <div class="article-info"><div class="date"><i class="las la-calendar"></i>
+        <div class="${"article-info"}"><div class="${"date"}"><i class="${"las la-calendar"}"></i>
                 ${validate_component(Time, "Time").$$render(
     $$result,
     {
@@ -70,13 +103,13 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</div>
-            <div class="tags"><i class="las la-tags"></i>
+            <div class="${"tags"}"><i class="${"las la-tags"}"></i>
                 ${each(meta.tag, (tag) => {
-    return `<span class="tag is-dark">${escape(tag)}</span>`;
+    return `<span class="${"tag is-dark"}">${escape(tag)}</span>`;
   })}</div>
-            <div class="read-time"><i class="las la-hourglass"></i>
+            <div class="${"read-time"}"><i class="${"las la-hourglass"}"></i>
                 ${escape(timeToRead)}</div></div>
-        <div class="content">${validate_component(body || missing_component, "svelte:component").$$render($$result, {}, {}, {})}</div>
+        <div class="${"content"}">${validate_component(body || missing_component, "svelte:component").$$render($$result, {}, {}, {})}</div>
 
         ${validate_component(Giscus, "Giscus").$$render(
     $$result,
@@ -97,9 +130,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {}
   )}</div></article>
 
-${$$result.head += `<!-- HEAD_svelte-1cy2aey_START -->${$$result.title = `<title>
+${$$result.head += `${$$result.title = `<title>
         ${escape(meta.title)}
-    </title>`, ""}<!-- HEAD_svelte-1cy2aey_END -->`, ""}`;
+    </title>`, ""}`, ""}`;
 });
 export {
   Page as default

@@ -26,9 +26,17 @@
         </div>
     </div>
     
-    <div>
-	<h3 class="is-size-3">Closing Keynote PyCon IL 2023</h3>
-	<iframe width="816" height="459" src="https://www.youtube.com/embed/zDGwC2shsgs?si=LgjU1DyPbyeTR0Tc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="video-wrap">
+        <h3 class="is-size-3">Closing Keynote PyCon IL 2023</h3>
+        <div class="video-embed">
+            <iframe
+                src="https://www.youtube.com/embed/zDGwC2shsgs?si=LgjU1DyPbyeTR0Tc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+        </div>
     </div>
 </Section>
 
@@ -36,5 +44,17 @@
     .box {
         background: transparent;
         box-shadow: none;
+    }
+    .video-embed {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+    .video-embed iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
     }
 </style>

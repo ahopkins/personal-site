@@ -1,9 +1,9 @@
 <script>
     const social = [
         {
-            url: "https://www.twitter.com/admhpkns",
+            url: "https://x.com/admhpkns",
             text: "@admhpkns",
-            icon: "devicon-twitter-original",
+            glyph: "𝕏",
         },
         {
             url: "https://github.com/ahopkins",
@@ -23,6 +23,7 @@
         <div class="">
             <h1 class="title is-size-1">Adam Hopkins</h1>
             <p class="subtitle">
+                Founder & CTO. AI-native platforms. <br />
                 <i class="devicon-python-plain colored" /> Python developer.
                 <img
                     src="/images/osi.png"
@@ -35,14 +36,18 @@
                     style="height: 20px;"
                     alt="Sanic"
                 />
-                Sanic Maintainer. <br />
+                Sanic Core Maintainer. <br />
                 Husband. Father. Son. Brother. <br />
                 A proud and happy man.
             </p>
             <div class="social">
                 {#each social as item}
                     <a href={item.url} target="_blank">
-                        <i class={item.icon} />
+                        {#if item.glyph}
+                            <span class="glyph">{item.glyph}</span>
+                        {:else}
+                            <i class={item.icon} />
+                        {/if}
                         {item.text}
                     </a>
                 {/each}
@@ -53,6 +58,13 @@
 </section>
 
 <style>
+    .social .glyph {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.05em;
+        margin-right: 0.15em;
+        vertical-align: -0.05em;
+    }
     .adam-avatar {
         position: absolute;
         right: 0;

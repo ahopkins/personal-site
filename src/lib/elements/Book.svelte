@@ -1,37 +1,54 @@
-<section class="section">
-    <div class="containter">
-        <div class="content is-size-2">
-            My book
-            <a href="https://sanicbook.com">
-                Python Web Development with Sanic
-            </a>
-            now available
-        </div>
+<section class="book-strip">
+    <div class="container">
+        <p>
+            <span class="book-label">Book</span>
+            <a href="https://sanicbook.com">Python Web Development with Sanic</a>
+            <span class="trailing">— available from Packt</span>
+        </p>
     </div>
 </section>
 
 <style>
-    .section {
+    .book-strip {
         background-color: #ff0d68;
         color: #000000;
-        position: relative;
-        transform: translateY(-100%);
+        padding: 0.75rem 1rem;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 500;
     }
-    .section a {
+    .book-strip p {
+        margin: 0;
+    }
+    .book-strip a {
         color: #000000;
         font-weight: 700;
         text-decoration: underline;
     }
-    .section a:hover {
+    .book-strip a:hover {
         color: #111111;
     }
-    @media (max-width: 800px) {
-        .section {
-            transform: translateY(-100vh);
-            padding: 0.25rem !important;
+    .book-label {
+        display: inline-block;
+        background: #000;
+        color: #ff0d68;
+        padding: 0.1rem 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 3px;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    @media (max-width: 600px) {
+        .book-strip {
+            font-size: 0.95rem;
+            padding: 0.6rem 0.75rem;
         }
-        .is-size-2 {
-            font-size: 1.25rem !important;
+        .trailing {
+            display: block;
+            margin-top: 0.15rem;
+            font-size: 0.85rem;
         }
     }
 </style>

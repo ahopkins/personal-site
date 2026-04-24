@@ -1,33 +1,27 @@
 <script>
- import Section from "../components/Section.svelte";
- import RepoCard from "../components/RepoCard.svelte";
-
- const repos = [
-     "ahopkins/europython2020-overcoming-access-control",
-     "ahopkins/pywebconf2021-making-sanic-even-faster",
-     "ahopkins/pyconil2021-liberate-your-api",
-     "ahopkins/pygeekle2022-mayim-byoq",
-     "ahopkins/pyconil-2023",
- ];
+    import Section from "../components/Section.svelte";
 </script>
 
 <Section title="Said">
     <div class="subtitle">
-        Some presentations I've given at tech conferences
+        Keynotes, conference talks, and podcast guest appearances
     </div>
-    
-    <div class="tile is-ancestor">
-        <div class="tile is-parent is-flex-wrap-wrap">
-            {#each repos as slug}
-                <div class="tile is-child is-6 box">
-                    <RepoCard {slug} />
-                </div>
-            {/each}
-        </div>
-    </div>
-    
+    <p>
+        I've keynoted and spoken at Python and engineering conferences
+        across the globe — <strong>PyCon IL</strong>,
+        <strong>EuroPython</strong>, <strong>PyWebConf</strong>,
+        <strong>PyGeekle</strong>, and others — and joined a handful of
+        podcasts along the way. Talks usually center on async Python,
+        scalable APIs, data platform architecture, and the developer
+        experience of building and maintaining open source.
+    </p>
+    <p>
+        If you're organizing a conference, podcast, or internal tech talk and
+        think I'd be a good fit, get in touch.
+    </p>
+
     <div class="video-wrap">
-        <h3 class="is-size-3">Closing Keynote PyCon IL 2023</h3>
+        <h3 class="is-size-3">Closing Keynote · PyCon IL 2023</h3>
         <div class="video-embed">
             <iframe
                 src="https://www.youtube.com/embed/zDGwC2shsgs?si=LgjU1DyPbyeTR0Tc"
@@ -41,9 +35,21 @@
 </Section>
 
 <style>
-    .box {
-        background: transparent;
-        box-shadow: none;
+    p {
+        color: #a0a0a0;
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+    p strong {
+        color: #eeeeee;
+        font-weight: 600;
+    }
+    .video-wrap {
+        margin-top: 2rem;
+    }
+    .video-wrap h3 {
+        color: #eeeeee;
+        margin-bottom: 1rem;
     }
     .video-embed {
         position: relative;

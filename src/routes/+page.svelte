@@ -6,8 +6,6 @@
 	import Content from "$lib/elements/Content.svelte";
 	import Footer from "$lib/elements/Footer.svelte";
 	import Book from "$lib/elements/Book.svelte";
-	import Home from "$lib/pages/Home.md";
-
 	onMount(addCopy);
 </script>
 
@@ -15,9 +13,6 @@
 	<Hero />
 	<Book />
 	<div class="container is-max-desktop mb-8 main-container">
-		<div class="mb-8">
-			<Home />
-		</div>
 		<Content />
 	</div>
 	<Footer />

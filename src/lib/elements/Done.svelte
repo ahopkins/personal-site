@@ -10,40 +10,47 @@
             current: true,
         },
         {
-            title: "Fractional CTO",
+            title: "CTO & Technology Consultant",
             company: "PacketFabric",
             years: "2025–present",
+            tagline: "Platform architecture & AI-readiness advisory",
+            current: true,
+        },
+        {
+            title: "Principal Consultant",
+            company: "Etz Lime · Self-employed",
+            years: "Jan 1999 – present",
+            tagline: "Advisory & full-stack engineering across languages and stacks",
             current: true,
         },
         {
             title: "Head of Data Modernization",
             company: "Lumen Technologies",
             years: "2024–2025",
+            tagline: "AI-ready data architecture & governance for a Fortune 500 company",
         },
         {
             title: "VP of Software Engineering",
             company: "PacketFabric",
             years: "2020–2024",
+            tagline: "Scaled software engineering to 30+ across distributed systems",
         },
         {
             title: "Principal Software Engineer",
             company: "Matrix Retail",
             years: "2017–2020",
+            tagline: "ML-driven predictive analytics & platform architecture",
         },
         {
             title: "Co-Founder & CTO",
             company: "Optymizer Solutions",
             years: "2015–2017",
+            tagline: "Real-time fraud detection with ML",
         },
         {
-            title: "Freelance Software Developer",
-            company: "Self-employed",
-            years: "1999–2015",
-        },
-        {
-            title: "Attorney / Paralegal",
-            company: "Various firms",
-            years: "2006–2014",
+            title: "Legal career",
+            company: "Admitted to the Massachusetts Bar",
+            years: "Through 2014",
         },
     ];
 

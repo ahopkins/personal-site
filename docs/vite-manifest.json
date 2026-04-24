@@ -11,6 +11,10 @@
     "file": "_app/immutable/assets/rubik-cyrillic-ext-300-normal-e2e1986b.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-cyrillic-ext-300-normal.woff2"
   },
+  "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot": {
+    "file": "_app/immutable/assets/la-solid-900-8a57f8a9.eot",
+    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot"
+  },
   "node_modules/@fontsource/rubik/files/rubik-hebrew-300-normal.woff2": {
     "file": "_app/immutable/assets/rubik-hebrew-300-normal-b8af7930.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-hebrew-300-normal.woff2"
@@ -38,10 +42,6 @@
   "node_modules/@fontsource/rubik/files/rubik-hebrew-400-normal.woff2": {
     "file": "_app/immutable/assets/rubik-hebrew-400-normal-300c9f68.woff2",
     "src": "node_modules/@fontsource/rubik/files/rubik-hebrew-400-normal.woff2"
-  },
-  "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot": {
-    "file": "_app/immutable/assets/la-solid-900-8a57f8a9.eot",
-    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.eot"
   },
   "node_modules/@fontsource/rubik/files/rubik-latin-ext-400-normal.woff2": {
     "file": "_app/immutable/assets/rubik-latin-ext-400-normal-bc5e3f53.woff2",
@@ -75,21 +75,21 @@
     "file": "_app/immutable/assets/la-regular-400-51ca2c00.woff2",
     "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-regular-400.woff2"
   },
-  "node_modules/@fontsource/rubik/files/rubik-all-300-normal.woff": {
-    "file": "_app/immutable/assets/rubik-all-300-normal-b82bb8cd.woff",
-    "src": "node_modules/@fontsource/rubik/files/rubik-all-300-normal.woff"
-  },
   "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.woff2": {
     "file": "_app/immutable/assets/la-brands-400-ff70c9bc.woff2",
     "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.woff2"
   },
-  "node_modules/@fontsource/rubik/files/rubik-all-400-normal.woff": {
-    "file": "_app/immutable/assets/rubik-all-400-normal-5b7083a0.woff",
-    "src": "node_modules/@fontsource/rubik/files/rubik-all-400-normal.woff"
+  "node_modules/@fontsource/rubik/files/rubik-all-300-normal.woff": {
+    "file": "_app/immutable/assets/rubik-all-300-normal-b82bb8cd.woff",
+    "src": "node_modules/@fontsource/rubik/files/rubik-all-300-normal.woff"
   },
   "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.woff2": {
     "file": "_app/immutable/assets/la-solid-900-10a68e01.woff2",
     "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.woff2"
+  },
+  "node_modules/@fontsource/rubik/files/rubik-all-400-normal.woff": {
+    "file": "_app/immutable/assets/rubik-all-400-normal-5b7083a0.woff",
+    "src": "node_modules/@fontsource/rubik/files/rubik-all-400-normal.woff"
   },
   "node_modules/@fontsource/rubik/files/rubik-all-700-normal.woff": {
     "file": "_app/immutable/assets/rubik-all-700-normal-b663a555.woff",
@@ -123,22 +123,22 @@
     "file": "_app/immutable/assets/la-regular-400-884ce19c.svg",
     "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-regular-400.svg"
   },
-  "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.svg": {
-    "file": "_app/immutable/assets/la-solid-900-0ce0cc40.svg",
-    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.svg"
-  },
   "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.svg": {
     "file": "_app/immutable/assets/la-brands-400-4da18191.svg",
     "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-brands-400.svg"
   },
+  "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.svg": {
+    "file": "_app/immutable/assets/la-solid-900-0ce0cc40.svg",
+    "src": "node_modules/line-awesome/dist/line-awesome/fonts/la-solid-900.svg"
+  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-fb26e36c.js",
+    "file": "_app/immutable/start-b10c1bad.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-aa6bc0ce.js",
-      "_index-93917c68.js",
-      "_singletons-57ab3786.js"
+      "_index-f2dd8444.js",
+      "_singletons-c2ce9628.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -149,53 +149,53 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
-    "file": "_app/immutable/components/layout.svelte-ee627b2c.js",
+    "file": "_app/immutable/components/layout.svelte-2ad3ce9d.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93917c68.js"
+      "_index-f2dd8444.js"
     ]
   },
   "src/routes/+error.svelte": {
-    "file": "_app/immutable/components/pages/_error.svelte-640c705e.js",
+    "file": "_app/immutable/components/pages/_error.svelte-d22f2443.js",
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93917c68.js",
-      "_singletons-57ab3786.js"
+      "_index-f2dd8444.js",
+      "_singletons-c2ce9628.js"
     ]
   },
   "src/routes/[slug]/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_slug_/_layout.svelte-5e57cdce.js",
+    "file": "_app/immutable/components/pages/_slug_/_layout.svelte-fb78ba60.js",
     "src": "src/routes/[slug]/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93917c68.js",
-      "_Footer-e0407cd3.js"
+      "_index-f2dd8444.js",
+      "_Footer-d6ca796f.js"
     ],
     "css": [
       "_app/immutable/assets/_layout-977ad0aa.css"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-b46cb103.js",
+    "file": "_app/immutable/components/pages/_page.svelte-341b9386.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93917c68.js",
-      "_Footer-e0407cd3.js",
+      "_index-f2dd8444.js",
+      "_Footer-d6ca796f.js",
       "_copy-640ac3a4.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-81bc20e6.css"
+      "_app/immutable/assets/_page-f44b8373.css"
     ]
   },
   "src/routes/[slug]/+page.svelte": {
-    "file": "_app/immutable/components/pages/_slug_/_page.svelte-074dffb5.js",
+    "file": "_app/immutable/components/pages/_slug_/_page.svelte-21d23850.js",
     "src": "src/routes/[slug]/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93917c68.js",
+      "_index-f2dd8444.js",
       "_preload-helper-aa6bc0ce.js",
       "_copy-640ac3a4.js"
     ],
@@ -212,33 +212,33 @@
     ]
   },
   "src/routes/[slug]/+page.js": {
-    "file": "_app/immutable/modules/pages/_slug_/_page.js-19251093.js",
+    "file": "_app/immutable/modules/pages/_slug_/_page.js-d7a03bb0.js",
     "src": "src/routes/[slug]/+page.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-aa6bc0ce.js",
-      "__page-921c8f99.js"
+      "__page-7adad6f9.js"
     ]
   },
-  "_singletons-57ab3786.js": {
-    "file": "_app/immutable/chunks/singletons-57ab3786.js",
+  "_singletons-c2ce9628.js": {
+    "file": "_app/immutable/chunks/singletons-c2ce9628.js",
     "imports": [
-      "_index-93917c68.js"
+      "_index-f2dd8444.js"
     ]
   },
   "_preload-helper-aa6bc0ce.js": {
     "file": "_app/immutable/chunks/preload-helper-aa6bc0ce.js"
   },
-  "_index-93917c68.js": {
-    "file": "_app/immutable/chunks/index-93917c68.js"
+  "_index-f2dd8444.js": {
+    "file": "_app/immutable/chunks/index-f2dd8444.js"
   },
   "__layout-8d2a742b.js": {
     "file": "_app/immutable/chunks/_layout-8d2a742b.js"
   },
-  "_Footer-e0407cd3.js": {
-    "file": "_app/immutable/chunks/Footer-e0407cd3.js",
+  "_Footer-d6ca796f.js": {
+    "file": "_app/immutable/chunks/Footer-d6ca796f.js",
     "imports": [
-      "_index-93917c68.js"
+      "_index-f2dd8444.js"
     ],
     "css": [
       "_app/immutable/assets/Footer-a2b1166d.css"
@@ -282,8 +282,8 @@
   "_copy-640ac3a4.js": {
     "file": "_app/immutable/chunks/copy-640ac3a4.js"
   },
-  "__page-921c8f99.js": {
-    "file": "_app/immutable/chunks/_page-921c8f99.js",
+  "__page-7adad6f9.js": {
+    "file": "_app/immutable/chunks/_page-7adad6f9.js",
     "imports": [
       "_preload-helper-aa6bc0ce.js"
     ],
@@ -292,7 +292,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-a285aae1.js",
+    "file": "_app/immutable/chunks/0-7fe30fa6.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -301,7 +301,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-cc29227d.js",
+    "file": "_app/immutable/chunks/1-30938d2d.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -309,7 +309,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-161fb2ad.js",
+    "file": "_app/immutable/chunks/2-83437ae9.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -317,7 +317,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-019f7e93.js",
+    "file": "_app/immutable/chunks/3-243ac8d2.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -325,11 +325,11 @@
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-e05b1e7d.js",
+    "file": "_app/immutable/chunks/4-aa3ba5bd.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-921c8f99.js",
+      "__page-7adad6f9.js",
       "src/routes/[slug]/+page.svelte"
     ]
   },
@@ -339,11 +339,11 @@
     "isDynamicEntry": true
   },
   "src/content/background-job-worker.md": {
-    "file": "_app/immutable/chunks/background-job-worker-83204d40.js",
+    "file": "_app/immutable/chunks/background-job-worker-32ad4843.js",
     "src": "src/content/background-job-worker.md",
     "isDynamicEntry": true,
     "imports": [
-      "_index-93917c68.js"
+      "_index-f2dd8444.js"
     ],
     "css": [
       "_app/immutable/assets/background-job-worker-b0c81d22.css"
@@ -358,7 +358,7 @@
     "src": "src/content/background-job-worker.css"
   },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-81bc20e6.css",
+    "file": "_app/immutable/assets/_page-f44b8373.css",
     "src": "src/routes/+page.css"
   },
   "Footer.css": {

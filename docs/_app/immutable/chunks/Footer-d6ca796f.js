@@ -1,0 +1,5 @@
+import{S as g,i as A,s as F,k as p,q as i,l as f,m as u,r as c,h as l,n as k,b as w,G as s,A as y}from"./index-f2dd8444.js";function I(h){let e,a,t,m,n,_,v,b,T;return{c(){e=p("footer"),a=p("div"),t=p("p"),m=i(`The source code is licensed
+            `),n=p("a"),_=i("MIT"),v=i(`.
+            The website content is \xA9 `),b=i(h[0]),T=i(" by Adam Hopkins."),this.h()},l(r){e=f(r,"FOOTER",{class:!0});var d=u(e);a=f(d,"DIV",{class:!0});var x=u(a);t=f(x,"P",{});var o=u(t);m=c(o,`The source code is licensed
+            `),n=f(o,"A",{href:!0});var E=u(n);_=c(E,"MIT"),E.forEach(l),v=c(o,`.
+            The website content is \xA9 `),b=c(o,h[0]),T=c(o," by Adam Hopkins."),o.forEach(l),x.forEach(l),d.forEach(l),this.h()},h(){k(n,"href","http://opensource.org/licenses/mit-license.php"),k(a,"class","content has-text-centered"),k(e,"class","footer has-background-black")},m(r,d){w(r,e,d),s(e,a),s(a,t),s(t,m),s(t,n),s(n,_),s(t,v),s(t,b),s(t,T)},p:y,i:y,o:y,d(r){r&&l(e)}}}function O(h){return[new Date().getFullYear()]}class D extends g{constructor(e){super(),A(this,e,O,I,F,{})}}export{D as F};

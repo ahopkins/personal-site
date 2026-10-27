@@ -37,7 +37,7 @@
 <main>
 	<Hero />
 	<Book />
-	<div class="container is-max-desktop mb-8 main-container">
+	<div id="content" class="container is-max-desktop mb-8 main-container">
 		<Content />
 	</div>
 	<Footer />

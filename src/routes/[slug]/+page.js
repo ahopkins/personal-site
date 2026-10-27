@@ -7,5 +7,6 @@ export async function load({ params }) {
     return {
         meta: { ...metadata },
         body,
+        slug,
     }
 }

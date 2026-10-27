@@ -6,7 +6,8 @@
     import { addCopy } from "$lib/utilities/copy";
     export let data;
 
-    const { meta, body } = data;
+    const { meta, body, slug } = data;
+    const url = `https://hpkns.io/${slug}/`;
     let timeToRead = "";
 
     /**
@@ -134,4 +135,17 @@
     <title>
         {meta.title}
     </title>
+    <meta name="description" content={meta.description} />
+    <link rel="canonical" href={url} />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Adam Hopkins" />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content="https://hpkns.io/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@admhpkns" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content="https://hpkns.io/og.png" />
 </svelte:head>

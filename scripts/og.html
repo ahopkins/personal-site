@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    @font-face {
+        font-family: Rubik;
+        font-weight: 400;
+        src: url(../node_modules/@fontsource/rubik/files/rubik-latin-400-normal.woff2) format("woff2");
+    }
+    @font-face {
+        font-family: Rubik;
+        font-weight: 700;
+        src: url(../node_modules/@fontsource/rubik/files/rubik-latin-700-normal.woff2) format("woff2");
+    }
+    html, body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #0a0a0a;
+        font-family: Rubik, sans-serif;
+    }
+    .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        background:
+            radial-gradient(circle at 78% 40%, rgba(255, 13, 104, 0.18), transparent 55%),
+            radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px) 0 0 / 24px 24px,
+            #0a0a0a;
+    }
+    .avatar {
+        position: absolute;
+        right: -40px;
+        bottom: -60px;
+        height: 760px;
+        filter: invert(100%);
+        opacity: 0.28;
+    }
+    .text {
+        position: absolute;
+        left: 80px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .rule {
+        width: 96px;
+        height: 8px;
+        background: #ff0d68;
+        border-radius: 4px;
+        margin-bottom: 36px;
+    }
+    h1 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 96px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1;
+    }
+    .role {
+        margin-top: 24px;
+        color: #eeeeee;
+        font-size: 40px;
+    }
+    .role b {
+        color: #ff0d68;
+        font-weight: 700;
+    }
+    .meta {
+        margin-top: 18px;
+        color: #a0a0a0;
+        font-size: 28px;
+    }
+    .url {
+        position: absolute;
+        left: 80px;
+        bottom: 56px;
+        color: #666666;
+        font-size: 26px;
+        letter-spacing: 0.04em;
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <img class="avatar" src="../static/images/adam-unified.svg" alt="">
+    <div class="text">
+        <div class="rule"></div>
+        <h1>Adam Hopkins</h1>
+        <div class="role">Co-Founder &amp; CTO, <b>StackYak</b></div>
+        <div class="meta">Python · Sanic Core Maintainer · AI infrastructure</div>
+    </div>
+    <div class="url">hpkns.io</div>
+</div>
+</body>
+</html>

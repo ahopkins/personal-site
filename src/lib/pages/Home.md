@@ -1,7 +1,9 @@
 <script>
     import "prismjs/themes/prism-okaidia.css"
+    import Terminal from "../components/Terminal.svelte"
 </script>
 
+<Terminal>
 
 ```python
 class Adam:
@@ -17,3 +19,5 @@ class Adam:
     def sleep(self):
         raise NotImplementedError
 ```
+
+</Terminal>

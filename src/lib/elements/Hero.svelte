@@ -24,7 +24,7 @@
             <h1 class="title is-size-1">Adam Hopkins</h1>
             <p class="subtitle">
                 Founder & CTO. AI-native platforms. <br />
-                <i class="devicon-python-plain colored" /> Python developer.
+                <i class="devicon-python-plain colored"></i> Python developer.
                 <img
                     src="/images/osi.png"
                     style="height: 20px;"
@@ -46,18 +46,23 @@
                         {#if item.glyph}
                             <span class="glyph">{item.glyph}</span>
                         {:else}
-                            <i class={item.icon} />
+                            <i class={item.icon}></i>
                         {/if}
                         {item.text}
                     </a>
                 {/each}
             </div>
         </div>
-        <div class="adam-avatar" />
+        <div class="adam-avatar"></div>
     </div>
 </section>
 
 <style>
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35em;
+    }
     .social .glyph {
         display: inline-block;
         font-weight: 700;

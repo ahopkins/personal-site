@@ -1,14 +1,14 @@
 <script>
-    import mermaid from "mermaid";
     import { onMount } from "svelte";
     let chart = null;
 
-    mermaid.initialize({
-        startOnLoad: false,
-        theme: "dark",
-    });
-    onMount(() => {
-        mermaid.init([chart]);
+    onMount(async () => {
+        const { default: mermaid } = await import("mermaid");
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: "dark",
+        });
+        await mermaid.run({ nodes: [chart] });
     });
 </script>
 

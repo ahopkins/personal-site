@@ -1,11 +1,7 @@
 <script>
     import { page } from "$app/stores"
 
-    const {
-        status,
-        error: { message },
-    } = $page
-    const title = `${status}: ${message}`
+    const title = `${$page.status}: ${$page.error?.message}`
 </script>
 
 <svelte:head>

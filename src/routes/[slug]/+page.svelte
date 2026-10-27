@@ -94,17 +94,17 @@
 
         <div class="article-info">
             <div class="date">
-                <i class="las la-calendar" />
+                <i class="las la-calendar"></i>
                 <Time timestamp={meta.date} live relative format="YYYY-MM-DD" />
             </div>
             <div class="tags">
-                <i class="las la-tags" />
+                <i class="las la-tags"></i>
                 {#each meta.tag as tag}
                     <span class="tag is-dark">{tag}</span>
                 {/each}
             </div>
             <div class="read-time">
-                <i class="las la-hourglass" />
+                <i class="las la-hourglass"></i>
                 {timeToRead}
             </div>
         </div>
@@ -113,6 +113,8 @@
         </div>
 
         <Giscus
+            id="comments"
+            term={meta.title}
             repo="ahopkins/personal-site"
             repoId="MDEwOlJlcG9zaXRvcnkxMDcxODQzMDY="
             category="Comments"

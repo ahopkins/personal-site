@@ -9,11 +9,11 @@
     <section class="section intro">
         <Home />
     </section>
-    <div class="is-divider" data-content="§" />
+    <div class="is-divider" data-content="§"></div>
     <Done />
-    <div class="is-divider" data-content="§" />
+    <div class="is-divider" data-content="§"></div>
     <Built />
-    <div class="is-divider" data-content="§" />
+    <div class="is-divider" data-content="§"></div>
     <Said />
 </div>
 

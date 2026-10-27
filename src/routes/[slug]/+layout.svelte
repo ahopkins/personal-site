@@ -27,9 +27,9 @@
             }
             }
         >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </a>
     </div>
 
@@ -46,13 +46,13 @@
             </a>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <span class="navbar-link" id="article-menu-title" />
-                <div class="navbar-dropdown" id="article-menu-content" />
+                <span class="navbar-link" id="article-menu-title"></span>
+                <div class="navbar-dropdown" id="article-menu-content"></div>
             </div>
         </div>
 
         <div class="navbar-end">
-            <a class="navbar-item" href="https://github.com/ahopkins/personal-site">
+            <a class="navbar-item" href="https://github.com/ahopkins/personal-site" aria-label="Source on GitHub">
                 <i class="lab la-github"></i>
             </a>
         </div>

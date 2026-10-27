@@ -17,7 +17,7 @@
                         <em>{article.description}</em>
                         <div class="article-info">
                             <div class="date">
-                                <i class="las la-calendar" />
+                                <i class="las la-calendar"></i>
                                 <Time
                                     timestamp={article.date}
                                     live
@@ -26,7 +26,7 @@
                                 />
                             </div>
                             <div class="tags">
-                                <i class="las la-tags" />
+                                <i class="las la-tags"></i>
                                 {#each article.tag as tag}
                                     <span class="tag is-dark">{tag}</span>
                                 {/each}

@@ -18,9 +18,9 @@
             href="https://github.com/ahopkins"
             target="_blank"
         >
-            <i class="lab la-github" />
+            <i class="lab la-github"></i>
             See it all on GitHub
-            <i class="las la-arrow-right" />
+            <i class="las la-arrow-right"></i>
         </a>
     </p>
 </Section>

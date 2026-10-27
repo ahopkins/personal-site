@@ -5,7 +5,7 @@
 
 ```python
 class Adam:
-    work = HyperFi("CTO & Co-founder")
+    work = StackYak("CTO & Co-founder")
     oss = Sanic("Core Maintainer")
     home = Israel("Negev")
 

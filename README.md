@@ -13,7 +13,7 @@ A single-instance, long-running process. Event-driven. Mostly stable in producti
 
 ```python
 class Adam:
-    work = HyperFi("CTO & Co-founder")
+    work = StackYak("CTO & Co-founder")
     oss = Sanic("Core Maintainer")
     home = Israel("Negev")
 
@@ -30,14 +30,13 @@ class Adam:
 
 | Instance        | Role                  | Since |
 | --------------- | --------------------- | ----- |
-| **HyperFi**     | Co-Founder & CTO      | 2025  |
-| **PacketFabric**| Fractional CTO        | 2025  |
+| **StackYak**    | Co-Founder & CTO      | 2026  |
 | **Sanic**       | Core Maintainer       | 2018  |
 
 ## Changelog
 
-- **2025** — Spun up `HyperFi`. AI-native infrastructure orchestration. $10M raised.
-- **2025** — Stepped into a fractional CTO seat at `PacketFabric`.
+- **2026** — Co-founded `StackYak`. Private AI inference stacks on dedicated GPUs.
+- **2025–2026** — CTO at `PacketFabric`.
 - **2024–2025** — Head of Data Modernization at `Lumen Technologies`. Led 120-person data org through a Databricks migration.
 - **2020–2024** — VP of Software Engineering at `PacketFabric`. Scaled eng to 30+.
 - **2017–2020** — Principal Software Engineer at `Matrix Retail`. Killed a Java monolith.

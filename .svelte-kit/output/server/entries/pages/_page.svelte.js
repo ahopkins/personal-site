@@ -44,7 +44,7 @@ const Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Home = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<pre class="${"language-python"}"><!-- HTML_TAG_START -->${`<code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Adam</span><span class="token punctuation">:</span>
-    work <span class="token operator">=</span> HyperFi<span class="token punctuation">(</span><span class="token string">"CTO &amp; Co-founder"</span><span class="token punctuation">)</span>
+    work <span class="token operator">=</span> StackYak<span class="token punctuation">(</span><span class="token string">"CTO &amp; Co-founder"</span><span class="token punctuation">)</span>
     oss <span class="token operator">=</span> Sanic<span class="token punctuation">(</span><span class="token string">"Core Maintainer"</span><span class="token punctuation">)</span>
     home <span class="token operator">=</span> Israel<span class="token punctuation">(</span><span class="token string">"Negev"</span><span class="token punctuation">)</span>
 
@@ -72,17 +72,16 @@ const Done = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const work = [
     {
       title: "Co-Founder & CTO",
-      company: "HyperFi",
-      years: "2025\u2013present",
-      tagline: "AI-native infrastructure orchestration",
+      company: "StackYak",
+      years: "2026\u2013present",
+      tagline: "Private AI inference stacks on dedicated GPU infrastructure",
       current: true
     },
     {
-      title: "CTO & Technology Consultant",
+      title: "CTO",
       company: "PacketFabric",
-      years: "2025\u2013present",
-      tagline: "Platform architecture & AI-readiness advisory",
-      current: true
+      years: "2025\u20132026",
+      tagline: "Platform architecture & AI-readiness advisory"
     },
     {
       title: "Principal Consultant",

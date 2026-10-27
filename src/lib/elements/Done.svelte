@@ -4,17 +4,16 @@
     const work = [
         {
             title: "Co-Founder & CTO",
-            company: "HyperFi",
-            years: "2025–present",
-            tagline: "AI-native infrastructure orchestration",
+            company: "StackYak",
+            years: "2026–present",
+            tagline: "Private AI inference stacks on dedicated GPU infrastructure",
             current: true,
         },
         {
-            title: "CTO & Technology Consultant",
+            title: "CTO",
             company: "PacketFabric",
-            years: "2025–present",
+            years: "2025–2026",
             tagline: "Platform architecture & AI-readiness advisory",
-            current: true,
         },
         {
             title: "Principal Consultant",

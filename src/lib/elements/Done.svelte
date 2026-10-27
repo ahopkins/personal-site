@@ -10,17 +10,17 @@
             current: true,
         },
         {
-            title: "CTO",
-            company: "PacketFabric",
-            years: "2025–2026",
-            tagline: "Platform architecture & AI-readiness advisory",
-        },
-        {
             title: "Principal Consultant",
             company: "Etz Lime · Self-employed",
             years: "Jan 1999 – present",
             tagline: "Advisory & full-stack engineering across languages and stacks",
             current: true,
+        },
+        {
+            title: "CTO",
+            company: "PacketFabric",
+            years: "2025–2026",
+            tagline: "Platform architecture & AI-readiness advisory",
         },
         {
             title: "Head of Data Modernization",
@@ -52,45 +52,93 @@
             years: "Through 2014",
         },
     ];
-
-    const classes = (current = false) => {
-        const base = ["tile", "is-child", "box"];
-        base.push(current ? "is-12" : "is-6");
-        return base.join(" ");
-    };
 </script>
 
 <Section title="Done">
     <div class="subtitle">Where I am now, and where I've been</div>
-    <div class="tile is-ancestor">
-        <div class="tile is-parent is-flex-wrap-wrap">
-            {#each work as position}
-                <div class={classes(position.current)}>
-                    <div class="content">
-                        {#if position.current}
-                            <div class="current">Current 🌟</div>
-                        {/if}
-                        <strong>{position.title}</strong>
-                        {position.company}
-                        {#if position.tagline}
-                            <div class="tagline">{position.tagline}</div>
-                        {/if}
-                        <div class="years">{position.years}</div>
-                    </div>
+    <ol class="timeline">
+        {#each work as position}
+            <li class="entry" class:current={position.current}>
+                <div class="when">
+                    {#if position.current}
+                        <span class="now">now</span>
+                    {/if}
+                    <span class="years">{position.years}</span>
                 </div>
-            {/each}
-        </div>
-    </div>
+                <div class="dot" aria-hidden="true"></div>
+                <div class="content">
+                    <strong>{position.title}</strong>
+                    {position.company}
+                    {#if position.tagline}
+                        <div class="tagline">{position.tagline}</div>
+                    {/if}
+                </div>
+            </li>
+        {/each}
+    </ol>
 </Section>
 
 <style>
-    .content .current {
-        float: right;
+    .timeline {
+        --rail: 9.5rem;
+        position: relative;
+        list-style: none;
+        margin: 2rem 0 0;
+        padding: 0;
     }
-
-    .box {
-        background: transparent;
-        box-shadow: none;
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        bottom: 0.5rem;
+        left: var(--rail);
+        width: 2px;
+        background: linear-gradient(#ff0d68, #3a3a3a 30%);
+    }
+    .entry {
+        position: relative;
+        display: grid;
+        grid-template-columns: var(--rail) 1fr;
+        column-gap: 2rem;
+        margin-bottom: 1rem;
+    }
+    .when {
+        padding: 1.25rem 1.5rem 0 0;
+        text-align: right;
+    }
+    .years {
+        display: block;
+        font-size: 0.85rem;
+        color: #666;
+        letter-spacing: 0.03em;
+    }
+    .now {
+        display: inline-block;
+        margin-bottom: 0.2rem;
+        color: #ff0d68;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    .dot {
+        position: absolute;
+        top: 1.45rem;
+        left: calc(var(--rail) + 1px);
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: #242424;
+        border: 2px solid #444;
+        transform: translateX(-50%);
+    }
+    .current .dot {
+        background: #ff0d68;
+        border-color: #ff0d68;
+        box-shadow: 0 0 0 4px rgba(255, 13, 104, 0.2), 0 0 16px rgba(255, 13, 104, 0.6);
+    }
+    .current .content {
+        border-left: 2px solid #ff0d68;
     }
 
     .content {
@@ -101,20 +149,42 @@
         padding: 1.25em;
         line-height: 1.5;
         color: var(--svc-text-primary, #586069);
+        margin: 0 !important;
     }
     .content strong {
         display: block;
+    }
+
+    @media (max-width: 768px) {
+        .timeline {
+            --rail: 0.4rem;
+        }
+        .entry {
+            grid-template-columns: 1fr;
+            padding-left: 1.75rem;
+        }
+        .when {
+            order: 1;
+            padding: 0 0 0.4rem;
+            text-align: left;
+        }
+        .when .now {
+            margin: 0 0.5rem 0 0;
+        }
+        .years {
+            display: inline;
+        }
+        .content {
+            order: 2;
+        }
+        .dot {
+            top: 0.3rem;
+        }
     }
     .content .tagline {
         font-size: 0.95rem;
         color: #a0a0a0;
         margin-top: 0.35rem;
         font-style: italic;
-    }
-    .content .years {
-        font-size: 0.8rem;
-        color: #666;
-        margin-top: 0.4rem;
-        letter-spacing: 0.03em;
     }
 </style>

@@ -65,6 +65,11 @@
     .hero {
         position: relative;
         overflow: hidden;
+        background-image: radial-gradient(
+            ellipse at 100% 0%,
+            rgba(255, 13, 104, 0.08),
+            transparent 50%
+        );
     }
     .hero-body {
         position: relative;
@@ -75,9 +80,7 @@
         inset: -48px;
         z-index: 0;
         pointer-events: none;
-        background:
-            radial-gradient(circle at 72% 45%, rgba(255, 13, 104, 0.14), transparent 45%),
-            radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 24px 24px;
+        background: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 24px 24px;
         animation: drift 24s linear infinite;
     }
     @keyframes drift {
